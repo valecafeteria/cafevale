@@ -14,7 +14,7 @@ header {
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 3em;
     color: #333;
 }
 
@@ -32,58 +32,134 @@ p {
     margin-top: 20px;
 }
 
-/* Navegación */
-nav {
-    background-color: #333;
-    padding: 10px 0;
-}
-
-nav ul {
-    list-style: none;
+/* Sección de introducción */
+.introduccion {
     text-align: center;
-    margin: 0;
-    padding: 0;
+    padding: 40px;
+    background-color: #f9f9f9;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-/* Secciones */
-section {
-    padding: 20px;
-    background-color: #fff;
-    margin: 10px;
-    border-radius: 8px;
-}
-
-section.hidden {
-    display: none;
-}
-
-h2 {
+.introduccion h2 {
     font-size: 2em;
     color: #333;
 }
 
-.mezcla, .producto {
-    background-color: #f9f9f9;
-    padding: 15px;
-    margin: 10px 0;
+.boton-descargar {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
     border-radius: 5px;
+    font-size: 1.2em;
+}
+
+/* Galería de imágenes */
+.galeria {
+    text-align: center;
+    padding: 40px;
+    background-color: #fff;
+}
+
+.galeria h2 {
+    font-size: 2em;
+    color: #333;
+}
+
+.galeria .imagenes {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.galeria img {
+    width: 30%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Menú interactivo */
+.menu {
+    text-align: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+}
+
+.menu h2 {
+    font-size: 2em;
+    color: #333;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flecha {
+    background-color: #333;
+    color: #fff;
+    font-size: 2em;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.flecha:focus {
+    outline: none;
+}
+
+.items {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.producto {
+    margin: 0 15px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Barra de búsqueda y cuenta */
+.busqueda-cuenta {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.busqueda-cuenta input {
+    padding: 10px;
+    width: 60%;
+    font-size: 1.2em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.cuenta-carrito a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em;
+}
+
+/* Contacto */
+#contacto {
+    text-align: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+}
+
+#contacto h2 {
+    font-size: 2em;
+    color: #333;
 }
 
 /* Pie de página */
 footer {
     text-align: center;
-    padding: 10px;
+    padding: 20px;
     background-color: #333;
     color: #fff;
 }
