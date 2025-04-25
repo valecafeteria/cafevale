@@ -1,59 +1,82 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cafetería Vale</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="estilos.css" />
 </head>
 <body>
 
   <header>
-    <h1>Cafetería Vale</h1>
+    <div class="logo">CAFETERÍA VALE</div>
     <nav>
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#menu">Menú</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
+      <a href="#inicio">Inicio</a>
+      <a href="#mezclas">Mezclas de Café</a>
+      <a href="#snacks">Snacks</a>
+      <a href="#tisana">Tisanas</a>
+      <a href="#menu">Menú</a>
+      <a href="#sucursales">Sucursales</a>
     </nav>
+    <div class="user-icons">
+      <a href="#">Buscar</a>
+      <a href="#">Mi Cuenta</a>
+      <a href="#">Su Pedido</a>
+    </div>
   </header>
 
-  <section id="inicio" class="hero">
-    <h2>Bienvenidos a Cafetería Vale</h2>
-    <p>Disfruta del mejor café y de un ambiente acogedor.</p>
+  <section class="hero" id="inicio">
+    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="Café Vale" />
   </section>
 
-  <section id="menu">
-    <h2>Nuestro Menú</h2>
-    <div class="menu-item">
-      <h3>Café Espresso</h3>
-      <p>Un café fuerte y concentrado, perfecto para empezar el día.</p>
-      <span>$2.50</span>
-    </div>
-    <div class="menu-item">
-      <h3>Capuchino</h3>
-      <p>Café con espuma de leche y un toque de canela.</p>
-      <span>$3.00</span>
-    </div>
-    <div class="menu-item">
-      <h3>Pastel de Chocolate</h3>
-      <p>Delicioso pastel con el mejor chocolate.</p>
-      <span>$4.50</span>
+  <section class="mezclas" id="mezclas">
+    <h2>NUESTRAS MEZCLAS DE CAFÉ</h2>
+    <div class="mezclas-grid">
+      <div class="mezcla">
+        <img src="https://i.imgur.com/W1QZ7vF.png" alt="Mezcla de la Casa" />
+        <p>Mezcla de la Casa - <strong>$45</strong></p>
+      </div>
+      <div class="mezcla">
+        <img src="https://i.imgur.com/C0yTjqB.png" alt="Mezcla Italiana" />
+        <p>Mezcla Italiana - <strong>$50</strong></p>
+      </div>
+      <div class="mezcla">
+        <img src="https://i.imgur.com/7EYD7x3.png" alt="Mezcla Cubana" />
+        <p>Mezcla Cubana - <strong>$48</strong></p>
+      </div>
     </div>
   </section>
 
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>📍 Dirección: Parque Principal, Haciendas de Tizayuca</p>
-    <p>📞 Teléfono: 7202453939</p>
-    <p>✉️ Email: cafeteriavale@gmail.com</p>
+  <section class="productos" id="menu">
+    <h2>MENÚ DESTACADO</h2>
+    <div class="productos-grid">
+      <div class="producto">
+        <img src="https://i.imgur.com/8Km9tLL.jpg" alt="Café Latte" />
+        <h3>Café Latte</h3>
+        <p>$42</p>
+      </div>
+      <div class="producto">
+        <img src="https://i.imgur.com/NxXLWBd.jpg" alt="Croissant" />
+        <h3>Croissant de Mantequilla</h3>
+        <p>$30</p>
+      </div>
+      <div class="producto">
+        <img src="https://i.imgur.com/fHyEMsl.jpg" alt="Tisana Frutal" />
+        <h3>Tisana Frutal</h3>
+        <p>$38</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sucursales" id="sucursales">
+    <h2>Visítanos</h2>
+    <p>Tizayuca, Hidalgo - Cecyteh</p>
+    <p>Próximamente más sucursales...</p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Cafetería Vale - Todos los derechos reservados.</p>
+    <p>&copy; 2025 Cafetería Vale. Todos los derechos reservados.</p>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
