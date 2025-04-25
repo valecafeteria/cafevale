@@ -1,49 +1,83 @@
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fffaf3;
+  color: #3e2b1b;
 }
 
 header {
-  background-color: #8B4513;
-  color: white;
-  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0e0d6;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  flex-wrap: wrap;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #4e2d1b;
 }
 
-nav ul li {
-  display: inline;
-  margin: 0 15px;
+nav {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
 }
 
-nav ul li a {
-  color: white;
+nav a, .user-icons a {
   text-decoration: none;
-  font-size: 18px;
+  color: #4c2b1a;
+  font-weight: 600;
 }
 
-.hero {
-  background: url('images/cafe.jpg') no-repeat center center/cover;
-  color: white;
-  padding: 50px 20px;
+.user-icons {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
 }
 
-.menu-item {
-  background: #f4f4f4;
-  padding: 10px;
-  margin: 10px auto;
-  width: 80%;
-  border-radius: 5px;
+.hero img {
+  width: 100%;
+  height: auto;
+}
+
+section {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.mezclas-grid, .productos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.mezcla, .producto {
+  width: 200px;
+}
+
+.mezcla img, .producto img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.producto h3 {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
 }
 
 footer {
-  background: #333;
+  background-color: #3e2b1b;
   color: white;
-  padding: 10px;
-  margin-top: 20px;
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
 }
