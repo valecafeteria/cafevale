@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cafetería Vale</title>
   <link rel="stylesheet" href="estilos.css" />
-  <script src="script.js"></script>
 </head>
 <body>
 
@@ -13,71 +12,67 @@
     <div class="logo">CAFETERÍA VALE</div>
     <nav>
       <a href="#inicio">Inicio</a>
-      <a href="#mezclas">Mezclas de Café</a>
-      <a href="#snacks">Snacks</a>
-      <a href="#tisana">Tisanas</a>
+      <a href="#mezclas">Mezclas</a>
       <a href="#menu">Menú</a>
       <a href="#sucursales">Sucursales</a>
     </nav>
     <div class="user-icons">
-      <a href="#">Buscar</a>
-      <a href="#">Mi Cuenta</a>
-      <a href="#">Su Pedido</a>
+      <a href="#" id="buscar">Buscar</a>
+      <a href="#" id="cuenta">Mi Cuenta</a>
+      <a href="#" id="pedido">Su Pedido</a>
     </div>
   </header>
 
   <section class="hero" id="inicio">
-    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="Café Vale" />
+    <h1>Bienvenid@ a Cafetería Vale</h1>
+    <p>Disfruta del mejor café artesanal y snacks deliciosos</p>
   </section>
 
   <section class="mezclas" id="mezclas">
-    <h2>NUESTRAS MEZCLAS DE CAFÉ</h2>
-    <div class="mezclas-grid">
-      <div class="mezcla">
+    <h2>Nuestras Mezclas</h2>
+    <div class="grid">
+      <div class="item">
         <img src="https://i.imgur.com/W1QZ7vF.png" alt="Mezcla de la Casa" />
         <p>Mezcla de la Casa - <strong>$45</strong></p>
       </div>
-      <div class="mezcla">
+      <div class="item">
         <img src="https://i.imgur.com/C0yTjqB.png" alt="Mezcla Italiana" />
-        <p>Mezcla Italiana - <strong>$50</strong></p>
+        <p>Italiana - <strong>$50</strong></p>
       </div>
-      <div class="mezcla">
-        <img src="https://i.imgur.com/7EYD7x3.png" alt="Mezcla Cubana" />
-        <p>Mezcla Cubana - <strong>$48</strong></p>
+      <div class="item">
+        <img src="https://i.imgur.com/7EYD7x3.png" alt="Cubana" />
+        <p>Cubana - <strong>$48</strong></p>
       </div>
     </div>
   </section>
 
-  <section class="productos" id="menu">
-    <h2>MENÚ DESTACADO</h2>
-    <div class="productos-grid">
-      <div class="producto">
-        <img src="https://i.imgur.com/8Km9tLL.jpg" alt="Café Latte" />
-        <h3>Café Latte</h3>
-        <p>$42</p>
+  <section class="menu" id="menu">
+    <h2>Menú Destacado</h2>
+    <div class="grid">
+      <div class="item">
+        <img src="https://i.imgur.com/8Km9tLL.jpg" alt="Latte" />
+        <p>Latte - <strong>$42</strong></p>
       </div>
-      <div class="producto">
+      <div class="item">
         <img src="https://i.imgur.com/NxXLWBd.jpg" alt="Croissant" />
-        <h3>Croissant de Mantequilla</h3>
-        <p>$30</p>
+        <p>Croissant - <strong>$30</strong></p>
       </div>
-      <div class="producto">
-        <img src="https://i.imgur.com/fHyEMsl.jpg" alt="Tisana Frutal" />
-        <h3>Tisana Frutal</h3>
-        <p>$38</p>
+      <div class="item">
+        <img src="https://i.imgur.com/fHyEMsl.jpg" alt="Tisana" />
+        <p>Tisana - <strong>$38</strong></p>
       </div>
     </div>
   </section>
 
   <section class="sucursales" id="sucursales">
     <h2>Visítanos</h2>
-    <p>Tizayuca, Hidalgo - Cecyteh</p>
-    <p>Próximamente más sucursales...</p>
+    <p>Tizayuca, Hidalgo (Cecyteh)</p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Cafetería Vale. Todos los derechos reservados.</p>
+    <p>&copy; 2025 Cafetería Vale - Todos los derechos reservados</p>
   </footer>
 
+  <script src="main.js"></script>
 </body>
 </html>
