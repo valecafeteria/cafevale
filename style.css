@@ -1,4 +1,4 @@
-/* Tipografía cursiva elegante */
+/* Estilos generales */
 body {
     font-family: 'Dancing Script', cursive; /* Tipografía cursiva elegante */
     margin: 0;
@@ -32,47 +32,80 @@ nav ul li a {
     font-family: 'Dancing Script', cursive; /* Letra cursiva */
 }
 
-/* Botones sin bordes */
-.boton-descargar, .flecha {
-    padding: 10px 20px;
-    background-color: #3c2a21;
-    color: #fff;
-    font-size: 1.2em;
-    text-decoration: none;
-    border-radius: 50px; /* Bordes redondeados */
-    border: none;
-    font-family: 'Dancing Script', cursive;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Suaviza el cambio de color */
-}
-
-.boton-descargar:hover, .flecha:hover {
-    background-color: #d4a29c; /* Color de hover */
-}
-
-/* Diseño de las imágenes y productos */
-.producto {
-    margin: 0 15px;
-    background-color: #f8d6cc;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    width: 300px;
+/* Sección de bienvenida */
+header {
     text-align: center;
-    font-family: 'Dancing Script', cursive; /* Tipografía cursiva */
+    padding: 20px;
+    background-color: #d4a29c;
+    color: white;
 }
 
-.producto h3 {
-    font-size: 1.5em;
+h1 {
+    font-size: 3em;
+    color: white;
+}
+
+p {
+    font-size: 1.2em;
+    color: white;
+}
+
+.bienvenida-imagen {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Sección de Introducción */
+.introduccion {
+    text-align: center;
+    padding: 40px;
+    background-color: #f8d6cc;
+}
+
+.introduccion h2 {
+    font-size: 2em;
     color: #3c2a21;
 }
 
-.producto p {
-    font-size: 1.1em;
-    color: #6f4f3e;
+.boton-descargar {
+    padding: 10px 20px;
+    background-color: #3c2a21;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px; /* Bordes redondeados */
+    font-size: 1.2em;
+    cursor: pointer;
+    font-family: 'Dancing Script', cursive;
+    transition: background-color 0.3s ease; /* Suaviza el cambio de color */
 }
 
-/* Galería */
+.boton-descargar:hover {
+    background-color: #d4a29c; /* Color de hover */
+}
+
+/* Galería de imágenes */
+#galeria {
+    text-align: center;
+    padding: 40px;
+    background-color: #fff;
+}
+
+#galeria h2 {
+    font-size: 2em;
+    color: #3c2a21;
+}
+
+.galeria .imagenes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
 .galeria img {
     width: 100%;
     height: auto;
@@ -85,7 +118,18 @@ nav ul li a {
     transform: scale(1.05); /* Efecto hover en imágenes */
 }
 
-/* Barra de navegación de menú */
+/* Menú interactivo */
+#menu {
+    text-align: center;
+    padding: 40px;
+    background-color: #fff;
+}
+
+#menu h2 {
+    font-size: 2em;
+    color: #3c2a21;
+}
+
 .carousel {
     display: flex;
     align-items: center;
@@ -115,9 +159,38 @@ nav ul li a {
 
 .items .producto {
     margin: 0 30px;
+    background-color: #f8d6cc;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    font-family: 'Dancing Script', cursive; /* Tipografía cursiva */
 }
 
-/* Efectos en la interfaz */
+.producto h3 {
+    font-size: 1.5em;
+    color: #3c2a21;
+}
+
+.producto p {
+    font-size: 1.1em;
+    color: #6f4f3e;
+}
+
+/* Contacto */
+#contacto {
+    text-align: center;
+    padding: 40px;
+    background-color: #f8d6cc;
+}
+
+#contacto h2 {
+    font-size: 2em;
+    color: #3c2a21;
+}
+
+/* Pie de página */
 footer {
     text-align: center;
     padding: 20px;
@@ -128,4 +201,13 @@ footer {
 
 footer p {
     font-size: 1.1em;
+}
+
+/* Barra de navegación de búsqueda */
+nav .busqueda input {
+    padding: 8px;
+    font-size: 1em;
+    width: 200px;
+    border-radius: 5px;
+    border: none;
 }
