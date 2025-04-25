@@ -1,13 +1,16 @@
-// Muestra una alerta simulando el carrito
 document.addEventListener("DOMContentLoaded", () => {
-  const pedidoBtn = document.querySelector("a[href='#pedido']");
-  
-  if (pedidoBtn) {
-    pedidoBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      alert("Tu carrito está vacío. Agrega algo delicioso.");
-    });
-  }
+  document.getElementById("pedido").addEventListener("click", (e) => {
+    e.preventDefault();
+    alert("Tu pedido está vacío. ¡Agrega algo delicioso!");
+  });
 
-  // También podrías animar al hacer scroll o cargar productos automáticamente
+  document.getElementById("buscar").addEventListener("click", (e) => {
+    e.preventDefault();
+    alert("Función de búsqueda en desarrollo.");
+  });
+
+  document.getElementById("cuenta").addEventListener("click", (e) => {
+    e.preventDefault();
+    alert("Inicia sesión próximamente.");
+  });
 });
