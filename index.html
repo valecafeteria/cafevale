@@ -7,53 +7,68 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Sección de bienvenida -->
     <header>
-        <h1>Bienvenido a Cafetería Vale</h1>
-        <p>Disfruta de un ambiente acogedor y un café delicioso.</p>
+        <h1>Cafetería Vale</h1>
+        <p>Pide un café, pide un snack</p>
         <img src="imagen-bonita.jpg" alt="Interior de Cafetería Vale" class="bienvenida-imagen">
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#mezclas">Mezclas</a></li>
-            <li><a href="#menu">Menú</a></li>
-            <li><a href="#sucursales">Sucursales</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
+    <section class="introduccion">
+        <h2>Cafetería, ven</h2>
+        <p>Un espacio para disfrutar de un buen café y deliciosos snacks. Ven y siéntete como en casa.</p>
+        <a href="#" class="boton-descargar">Descargar Menú</a>
+    </section>
 
-    <section id="mezclas" class="hidden">
-        <h2>Nuestras Mezclas</h2>
-        <div class="mezcla">
-            <h3>Mezcla de la Casa Italiana Cubana</h3>
-            <p>Una combinación única de sabores que te transportará a Italia y Cuba.</p>
+    <!-- Galería de la cafetería -->
+    <section class="galeria">
+        <h2>Galería</h2>
+        <div class="imagenes">
+            <img src="cafeteria1.jpg" alt="Cafetería Vale 1">
+            <img src="cafeteria2.jpg" alt="Cafetería Vale 2">
+            <img src="cafeteria3.jpg" alt="Cafetería Vale 3">
         </div>
     </section>
 
-    <section id="menu" class="hidden">
+    <!-- Menú interactivo -->
+    <section class="menu">
         <h2>Menú</h2>
-        <div class="producto">
-            <h3>Latte</h3>
-            <p>Un espresso suave con leche vaporizada.</p>
-        </div>
-        <div class="producto">
-            <h3>Croissant</h3>
-            <p>Delicioso croissant recién horneado.</p>
-        </div>
-        <div class="producto">
-            <h3>Tizana</h3>
-            <p>Una mezcla refrescante de frutas de temporada.</p>
+        <div class="carousel">
+            <button class="flecha izquierda">&lt;</button>
+            <div class="items">
+                <div class="producto">
+                    <h3>Café Espresso</h3>
+                    <p>Descripción del café espresso.</p>
+                </div>
+                <div class="producto">
+                    <h3>Café Latte</h3>
+                    <p>Descripción del café latte.</p>
+                </div>
+                <div class="producto">
+                    <h3>Café Mocha</h3>
+                    <p>Descripción del café mocha.</p>
+                </div>
+            </div>
+            <button class="flecha derecha">&gt;</button>
         </div>
     </section>
 
-    <section id="sucursales">
-        <h2>Sucursales</h2>
-        <p>Visítanos en nuestras ubicaciones:</p>
-        <ul>
-            <li>Dr. Lucio 181, Doctores</li>
-            <li>Orizaba 42, Roma Norte</li>
-        </ul>
+    <!-- Barra de búsqueda y cuenta -->
+    <section class="busqueda-cuenta">
+        <input type="text" placeholder="Buscar...">
+        <div class="cuenta-carrito">
+            <a href="#cuenta">Mi Cuenta</a>
+            <a href="#carrito">Carrito</a>
+        </div>
+    </section>
+
+    <!-- Sección de contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Contáctanos para más información.</p>
+        <p>Teléfono: 123-456-7890</p>
+        <p>Email: contacto@cafeteriavale.com</p>
     </section>
 
     <footer>
