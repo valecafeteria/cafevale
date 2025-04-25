@@ -1,5 +1,9 @@
-function mostrarSeccion(id) {
-  const secciones = document.querySelectorAll('.seccion');
-  secciones.forEach(seccion => seccion.classList.remove('activa'));
-  document.getElementById(id).classList.add('activa');
-}
+document.getElementById('mezclas-btn').addEventListener('click', function() {
+    document.getElementById('mezclas').classList.toggle('hidden');
+    document.getElementById('menu').classList.add('hidden'); // Ocultar menú
+});
+
+document.getElementById('menu-btn').addEventListener('click', function() {
+    document.getElementById('menu').classList.toggle('hidden');
+    document.getElementById('mezclas').classList.add('hidden'); // Ocultar mezclas
+});
