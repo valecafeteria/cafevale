@@ -12,65 +12,71 @@
   <header>
     <div class="logo">CAFETERÍA VALE</div>
     <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="#mezclas">Mezclas</a>
-      <a href="#menu">Menú</a>
-      <a href="#sucursales">Sucursales</a>
-      <a href="#" id="pedido">Su Pedido</a>
+      <a href="#" onclick="mostrarSeccion('inicio')">Inicio</a>
+      <a href="#" onclick="mostrarSeccion('mezclas')">Mezclas</a>
+      <a href="#" onclick="mostrarSeccion('menu')">Menú</a>
+      <a href="#" onclick="mostrarSeccion('sucursales')">Sucursales</a>
     </nav>
+    <div class="acciones">
+      <input type="text" placeholder="Buscar..." class="busqueda">
+      <a href="#" class="icono">Mi Cuenta</a>
+      <a href="#" class="icono">Mi Pedido</a>
+    </div>
   </header>
 
-  <section class="hero" id="inicio">
-    <h1>Bienvenid@ a Cafetería Vale</h1>
-    <p>Disfruta del mejor café artesanal y snacks deliciosos</p>
-  </section>
+  <main>
+    <section id="inicio" class="seccion activa">
+      <h1>Bienvenid@ a Cafetería Vale</h1>
+      <p>Disfruta del mejor café artesanal y snacks deliciosos.</p>
+    </section>
 
-  <section class="mezclas" id="mezclas">
-    <h2>Nuestras Mezclas</h2>
-    <div class="grid">
-      <div class="item">
-        <img src="https://images.unsplash.com/photo-1605478031435-dab4f0b9f3fd?auto=format&fit=crop&w=600&q=80" alt="Mezcla de la Casa" />
-        <h3>Mezcla de la Casa</h3>
-        <p>$45</p>
+    <section id="mezclas" class="seccion">
+      <h2>Nuestras Mezclas</h2>
+      <div class="grid">
+        <div class="item">
+          <img src="https://images.unsplash.com/photo-1605478031435-dab4f0b9f3fd?auto=format&fit=crop&w=600&q=80" />
+          <h3>Mezcla de la Casa</h3>
+          <p>$45</p>
+        </div>
+        <div class="item">
+          <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=600&q=80" />
+          <h3>Italiana</h3>
+          <p>$50</p>
+        </div>
+        <div class="item">
+          <img src="https://images.unsplash.com/photo-1578685871208-772a65cf1c46?auto=format&fit=crop&w=600&q=80" />
+          <h3>Cubana</h3>
+          <p>$48</p>
+        </div>
       </div>
-      <div class="item">
-        <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=600&q=80" alt="Mezcla Italiana" />
-        <h3>Italiana</h3>
-        <p>$50</p>
-      </div>
-      <div class="item">
-        <img src="https://images.unsplash.com/photo-1578685871208-772a65cf1c46?auto=format&fit=crop&w=600&q=80" alt="Mezcla Cubana" />
-        <h3>Cubana</h3>
-        <p>$48</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="menu" id="menu">
-    <h2>Menú Destacado</h2>
-    <div class="grid">
-      <div class="item">
-        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80" alt="Latte" />
-        <h3>Latte</h3>
-        <p>$42</p>
+    <section id="menu" class="seccion">
+      <h2>Menú Destacado</h2>
+      <div class="grid">
+        <div class="item">
+          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80" />
+          <h3>Latte</h3>
+          <p>$42</p>
+        </div>
+        <div class="item">
+          <img src="https://images.unsplash.com/photo-1612197522788-e0d90b7fa9ef?auto=format&fit=crop&w=600&q=80" />
+          <h3>Croissant</h3>
+          <p>$30</p>
+        </div>
+        <div class="item">
+          <img src="https://images.unsplash.com/photo-1507919980482-48e72b1d63ef?auto=format&fit=crop&w=600&q=80" />
+          <h3>Tisana</h3>
+          <p>$38</p>
+        </div>
       </div>
-      <div class="item">
-        <img src="https://images.unsplash.com/photo-1612197522788-e0d90b7fa9ef?auto=format&fit=crop&w=600&q=80" alt="Croissant" />
-        <h3>Croissant</h3>
-        <p>$30</p>
-      </div>
-      <div class="item">
-        <img src="https://images.unsplash.com/photo-1507919980482-48e72b1d63ef?auto=format&fit=crop&w=600&q=80" alt="Tisana" />
-        <h3>Tisana</h3>
-        <p>$38</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="sucursales" id="sucursales">
-    <h2>Visítanos</h2>
-    <p>Cecyteh Tizayuca, Hidalgo</p>
-  </section>
+    <section id="sucursales" class="seccion">
+      <h2>Sucursales</h2>
+      <p>Visítanos en Cecyteh Tizayuca, Hidalgo.</p>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 Cafetería Vale. Todos los derechos reservados.</p>
