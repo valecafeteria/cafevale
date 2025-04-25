@@ -1,78 +1,101 @@
-body {
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #fffdf9;
-  color: #3b2a20;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fffaf4;
+  color: #3d2b1f;
+  line-height: 1.6;
 }
 
 header {
-  background: #f1e0ce;
+  background-color: #f7e4d3;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #5c3a2e;
 }
 
-nav {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-nav a, .user-icons a {
+nav a {
+  margin: 0 1rem;
   text-decoration: none;
-  color: #5b3922;
-  font-weight: 600;
+  color: #5c3a2e;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
-.user-icons {
-  display: flex;
-  gap: 0.8rem;
-  font-size: 0.9rem;
+nav a:hover {
+  color: #9e6d45;
 }
 
 .hero {
-  text-align: center;
-  background: #fef4e8;
-  padding: 3rem 1rem;
+  background: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  height: 60vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
 }
 
 section {
-  padding: 2.5rem 1rem;
+  padding: 3rem 2rem;
   text-align: center;
 }
 
 h2 {
-  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
 .grid {
   display: flex;
   justify-content: center;
+  gap: 2rem;
   flex-wrap: wrap;
-  gap: 1.5rem;
 }
 
 .item {
-  width: 150px;
+  width: 200px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  padding: 1rem;
 }
 
 .item img {
   width: 100%;
   border-radius: 8px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  margin-bottom: 0.5rem;
+}
+
+.item h3 {
+  font-size: 1.1rem;
+  margin: 0.3rem 0;
 }
 
 footer {
-  background-color: #3b2a20;
+  background-color: #3d2b1f;
   color: white;
-  padding: 1rem;
+  padding: 1.5rem;
   font-size: 0.9rem;
   text-align: center;
 }
