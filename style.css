@@ -1,42 +1,16 @@
-/* Estilos generales */
+/* Tipografía cursiva elegante */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Dancing Script', cursive; /* Tipografía cursiva elegante */
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
     color: #3c2a21;
 }
 
-header {
-    text-align: center;
-    padding: 20px;
-    background-color: #d4a29c;
-    color: white;
-}
-
-h1 {
-    font-size: 3em;
-    color: white;
-}
-
-p {
-    font-size: 1.2em;
-    color: white;
-}
-
-.bienvenida-imagen {
-    width: 100%;
-    height: auto;
-    max-height: 400px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-top: 20px;
-}
-
 /* Barra de navegación */
 nav {
     background-color: #3c2a21;
-    padding: 10px 0;
+    padding: 15px 0;
 }
 
 nav ul {
@@ -48,93 +22,82 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.4em;
+    font-family: 'Dancing Script', cursive; /* Letra cursiva */
 }
 
-nav .busqueda input {
-    padding: 8px;
-    font-size: 1em;
-    width: 200px;
-    border-radius: 5px;
-    border: none;
-}
-
-/* Sección de Introducción */
-.introduccion {
-    text-align: center;
-    padding: 40px;
-    background-color: #f8d6cc;
-}
-
-.introduccion h2 {
-    font-size: 2em;
-    color: #3c2a21;
-}
-
-.boton-descargar {
+/* Botones sin bordes */
+.boton-descargar, .flecha {
     padding: 10px 20px;
     background-color: #3c2a21;
     color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
     font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 50px; /* Bordes redondeados */
+    border: none;
+    font-family: 'Dancing Script', cursive;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Suaviza el cambio de color */
 }
 
-/* Galería de imágenes */
-#galeria {
+.boton-descargar:hover, .flecha:hover {
+    background-color: #d4a29c; /* Color de hover */
+}
+
+/* Diseño de las imágenes y productos */
+.producto {
+    margin: 0 15px;
+    background-color: #f8d6cc;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    width: 300px;
     text-align: center;
-    padding: 40px;
-    background-color: #fff;
+    font-family: 'Dancing Script', cursive; /* Tipografía cursiva */
 }
 
-#galeria h2 {
-    font-size: 2em;
+.producto h3 {
+    font-size: 1.5em;
     color: #3c2a21;
 }
 
-.galeria .imagenes {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    margin-top: 20px;
+.producto p {
+    font-size: 1.1em;
+    color: #6f4f3e;
 }
 
+/* Galería */
 .galeria img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 15px;
     object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
-/* Menú interactivo */
-#menu {
-    text-align: center;
-    padding: 40px;
-    background-color: #fff;
+.galeria img:hover {
+    transform: scale(1.05); /* Efecto hover en imágenes */
 }
 
-#menu h2 {
-    font-size: 2em;
-    color: #3c2a21;
-}
-
+/* Barra de navegación de menú */
 .carousel {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 30px;
 }
 
 .flecha {
-    background-color: #3c2a21;
-    color: #fff;
-    font-size: 2em;
-    padding: 10px;
+    background-color: transparent;
+    color: #3c2a21;
+    font-size: 2.5em;
+    padding: 0 15px;
     border: none;
     cursor: pointer;
 }
@@ -150,32 +113,19 @@ nav .busqueda input {
     width: 60%;
 }
 
-.producto {
-    margin: 0 15px;
-    background-color: #f8d6cc;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
+.items .producto {
+    margin: 0 30px;
 }
 
-/* Contacto */
-#contacto {
-    text-align: center;
-    padding: 40px;
-    background-color: #f8d6cc;
-}
-
-#contacto h2 {
-    font-size: 2em;
-    color: #3c2a21;
-}
-
-/* Pie de página */
+/* Efectos en la interfaz */
 footer {
     text-align: center;
     padding: 20px;
     background-color: #3c2a21;
     color: #fff;
+    font-family: 'Dancing Script', cursive;
+}
+
+footer p {
+    font-size: 1.1em;
 }
