@@ -1,87 +1,81 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cafetería Vale</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafetería Vale</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Sección de bienvenida -->
+    <header>
+        <h1>Bienvenido, Bienvenida a Cafetería Vale</h1>
+        <img src="bienvenida-imagen.jpg" alt="Imagen de bienvenida">
+    </header>
 
-  <header>
-    <div class="logo">CAFETERÍA VALE</div>
+    <!-- Navegación -->
     <nav>
-      <a href="#" onclick="mostrarSeccion('inicio')">Inicio</a>
-      <a href="#" onclick="mostrarSeccion('mezclas')">Mezclas</a>
-      <a href="#" onclick="mostrarSeccion('menu')">Menú</a>
-      <a href="#" onclick="mostrarSeccion('sucursales')">Sucursales</a>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#mezclas" id="mezclas-btn">Mezclas</a></li>
+            <li><a href="#menu" id="menu-btn">Menú</a></li>
+            <li><a href="#sucursales">Sucursales</a></li>
+            <li><a href="#busqueda">Búsqueda</a></li>
+            <li><a href="#mi-cuenta">Mi Cuenta</a></li>
+            <li><a href="#su-pedido">Su Pedido</a></li>
+        </ul>
     </nav>
-    <div class="acciones">
-      <input type="text" placeholder="Buscar..." class="busqueda">
-      <a href="#" class="icono">Mi Cuenta</a>
-      <a href="#" class="icono">Mi Pedido</a>
-    </div>
-  </header>
 
-  <main>
-    <section id="inicio" class="seccion activa">
-      <h1>Bienvenid@ a Cafetería Vale</h1>
-      <p>Disfruta del mejor café artesanal y snacks deliciosos.</p>
+    <!-- Sección de mezclas (invisible por defecto) -->
+    <section id="mezclas" class="hidden">
+        <h2>Nuestras Mezclas</h2>
+        <div class="mezcla">
+            <h3>Mezcla de la Casa Italiana Cubana</h3>
+            <p>Descripción de la mezcla...</p>
+        </div>
     </section>
 
-    <section id="mezclas" class="seccion">
-      <h2>Nuestras Mezclas</h2>
-      <div class="grid">
-        <div class="item">
-          <img src="https://images.unsplash.com/photo-1605478031435-dab4f0b9f3fd?auto=format&fit=crop&w=600&q=80" />
-          <h3>Mezcla de la Casa</h3>
-          <p>$45</p>
+    <!-- Sección de menú (invisible por defecto) -->
+    <section id="menu" class="hidden">
+        <h2>Menú</h2>
+        <div class="producto">
+            <h3>Latte</h3>
+            <p>Descripción del producto...</p>
         </div>
-        <div class="item">
-          <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=600&q=80" />
-          <h3>Italiana</h3>
-          <p>$50</p>
+        <div class="producto">
+            <h3>Croissant</h3>
+            <p>Descripción del producto...</p>
         </div>
-        <div class="item">
-          <img src="https://images.unsplash.com/photo-1578685871208-772a65cf1c46?auto=format&fit=crop&w=600&q=80" />
-          <h3>Cubana</h3>
-          <p>$48</p>
+        <div class="producto">
+            <h3>Tizana</h3>
+            <p>Descripción del producto...</p>
         </div>
-      </div>
     </section>
 
-    <section id="menu" class="seccion">
-      <h2>Menú Destacado</h2>
-      <div class="grid">
-        <div class="item">
-          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80" />
-          <h3>Latte</h3>
-          <p>$42</p>
-        </div>
-        <div class="item">
-          <img src="https://images.unsplash.com/photo-1612197522788-e0d90b7fa9ef?auto=format&fit=crop&w=600&q=80" />
-          <h3>Croissant</h3>
-          <p>$30</p>
-        </div>
-        <div class="item">
-          <img src="https://images.unsplash.com/photo-1507919980482-48e72b1d63ef?auto=format&fit=crop&w=600&q=80" />
-          <h3>Tisana</h3>
-          <p>$38</p>
-        </div>
-      </div>
+    <!-- Sección de sucursales -->
+    <section id="sucursales">
+        <h2>Sucursales</h2>
+        <p>Información de nuestras sucursales...</p>
     </section>
 
-    <section id="sucursales" class="seccion">
-      <h2>Sucursales</h2>
-      <p>Visítanos en Cecyteh Tizayuca, Hidalgo.</p>
+    <!-- Sección de búsqueda -->
+    <section id="busqueda">
+        <h2>Búsqueda</h2>
+        <input type="text" placeholder="Buscar...">
     </section>
-  </main>
 
-  <footer>
-    <p>&copy; 2025 Cafetería Vale. Todos los derechos reservados.</p>
-  </footer>
+    <!-- Sección de mi cuenta -->
+    <section id="mi-cuenta">
+        <h2>Mi Cuenta</h2>
+        <p>Información de la cuenta del cliente...</p>
+    </section>
 
-  <script src="script.js"></script>
+    <!-- Sección de su pedido -->
+    <section id="su-pedido">
+        <h2>Su Pedido</h2>
+        <p>Detalles del pedido...</p>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
