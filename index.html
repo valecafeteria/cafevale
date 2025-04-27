@@ -5,80 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cafetería Vale</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <!-- Barra de navegación superior -->
-    <nav>
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#galeria">Galería</a></li>
-            <li><a href="#menu">Menú</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-            <li class="busqueda">
-                <input type="text" placeholder="Buscar...">
-            </li>
-            <li><a href="#cuenta">Mi Cuenta</a></li>
-            <li><a href="#carrito">Carrito</a></li>
-        </ul>
-    </nav>
-
-    <!-- Sección de bienvenida -->
-    <header id="inicio">
-        <h1>Cafetería Vale</h1>
-        <p>Pide un café, pide un snack</p>
-        <img src="imagen-bonita.jpg" alt="Interior de Cafetería Vale" class="bienvenida-imagen">
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>Cafetería Vale</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#mezclas">Mezclas</a></li>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#sucursales">Sucursales</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Introducción y botón de descarga del menú -->
-    <section class="introduccion">
-        <h2>Cafetería, ven</h2>
-        <p>Un espacio para disfrutar de un buen café y deliciosos snacks. Ven y siéntete como en casa.</p>
-        <a href="#" class="boton-descargar">Descargar Menú</a>
-    </section>
-
-    <!-- Galería de la cafetería -->
-    <section id="galeria">
-        <h2>Galería de la Cafetería</h2>
-        <div class="imagenes">
-            <img src="cafeteria1.jpg" alt="Cafetería Vale 1">
-            <img src="cafeteria2.jpg" alt="Cafetería Vale 2">
-            <img src="cafeteria3.jpg" alt="Cafetería Vale 3">
+    <!-- Sección Bienvenida -->
+    <section id="inicio">
+        <div class="bienvenida">
+            <h2>Bienvenido, Bienvenida a Cafetería Vale</h2>
+            <img src="imagen_bienvenida.jpg" alt="Cafetería Vale">
         </div>
     </section>
 
-    <!-- Menú interactivo -->
-    <section id="menu">
-        <h2>Menú</h2>
-        <div class="carousel">
-            <button class="flecha izquierda">&lt;</button>
-            <div class="items">
-                <div class="producto">
-                    <h3>Café Espresso</h3>
-                    <p>Descripción del café espresso.</p>
-                </div>
-                <div class="producto">
-                    <h3>Café Latte</h3>
-                    <p>Descripción del café latte.</p>
-                </div>
-                <div class="producto">
-                    <h3>Café Mocha</h3>
-                    <p>Descripción del café mocha.</p>
-                </div>
+    <!-- Sección Mezclas -->
+    <section id="mezclas" class="contenido">
+        <h2>Nuestras Mezclas</h2>
+        <div class="mezclas-lista">
+            <div class="mezcla">
+                <h3>Mezcla Casa Italiana Cubana</h3>
+                <p>Descripción de la mezcla...</p>
             </div>
-            <button class="flecha derecha">&gt;</button>
         </div>
     </section>
 
-    <!-- Contacto -->
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <p>Contáctanos para más información.</p>
-        <p>Teléfono: 123-456-7890</p>
-        <p>Email: contacto@cafeteriavale.com</p>
+    <!-- Sección Menú -->
+    <section id="menu" class="contenido">
+        <h2>Menú</h2>
+        <div class="menu-items">
+            <div class="producto">
+                <h3>Latte</h3>
+                <p>$40.00</p>
+            </div>
+        </div>
     </section>
 
+    <!-- Sección Sucursales -->
+    <section id="sucursales" class="contenido">
+        <h2>Encuentra tu Sucursal</h2>
+        <p>Direcciones y mapa...</p>
+    </section>
+
+    <!-- Sección Búsqueda y Cuenta -->
+    <section id="busqueda-cuenta">
+        <div class="search-container">
+            <input type="text" placeholder="Buscar productos...">
+        </div>
+        <div class="cuenta-container">
+            <a href="mi-cuenta.html">Mi Cuenta</a>
+        </div>
+        <div class="pedido-container">
+            <a href="su-pedido.html">Su Pedido</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Cafetería Vale. Todos los derechos reservados.</p>
     </footer>
