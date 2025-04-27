@@ -1,28 +1,29 @@
-// Funcionalidad para el carrusel de productos
-let currentIndex = 0;
-const items = document.querySelector('.items');
-const productos = document.querySelectorAll('.producto');
-
-document.querySelector('.flecha.derecha').addEventListener('click', () => {
-    if (currentIndex < productos.length - 1) {
-        currentIndex++;
-        updateCarousel();
-    }
+// Función para realizar la búsqueda
+document.querySelector('#busqueda-cuenta input').addEventListener('input', function(e) {
+    let query = e.target.value.toLowerCase();
+    let productos = document.querySelectorAll('.producto, .mezcla');
+    productos.forEach(function(producto) {
+        let nombre = producto.querySelector('h3').textContent.toLowerCase();
+        if (nombre.includes(query)) {
+            producto.style.display = 'block';
+        } else {
+            producto.style.display = 'none';
+        }
+    });
 });
 
-document.querySelector('.flecha.izquierda').addEventListener('click', () => {
-    if (currentIndex > 0) {
-        currentIndex--;
-        updateCarousel();
-    }
+// Función para mostrar u ocultar el contenido de cada sección al hacer clic en los enlaces del menú
+document.querySelectorAll('header nav ul li a').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        let targetId = this.getAttribute('href').substring(1);
+        let secciones = document.querySelectorAll('.contenido, #inicio');
+        secciones.forEach(function(seccion) {
+            seccion.style.display = 'none';
+        });
+        document.getElementById(targetId).style.display = 'block';
+    });
 });
 
-function updateCarousel() {
-    const offset = -currentIndex * 100; // Cambia 100 por el ancho de tu producto
-    items.style.transform = `translateX(${offset}%)`;
-}
-
-// Funcionalidad para descargar el menú
-document.querySelector('.boton-descargar').addEventListener('click', () => {
-    alert('¡El menú se está descargando!');
-});
+// Mostrar la primera sección (Inicio) por defecto
+document.getElementById('inicio').style.display = 'block';
