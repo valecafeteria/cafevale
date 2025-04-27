@@ -1,213 +1,126 @@
-/* Estilos generales */
-body {
-    font-family: 'Dancing Script', cursive; /* Tipografía cursiva elegante */
+/* Reset de estilos */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
-    color: #3c2a21;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
-/* Barra de navegación */
-nav {
-    background-color: #3c2a21;
-    padding: 15px 0;
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
 }
 
-nav ul {
-    list-style: none;
+header .logo h1 {
     text-align: center;
-    margin: 0;
-    padding: 0;
+    font-family: 'Cursive', sans-serif;
+    font-size: 36px;
 }
 
-nav ul li {
-    display: inline;
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 0;
+}
+
+header nav ul li {
     margin: 0 20px;
 }
 
-nav ul li a {
-    color: #fff;
+header nav ul li a {
     text-decoration: none;
-    font-size: 1.4em;
-    font-family: 'Dancing Script', cursive; /* Letra cursiva */
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
 }
 
-/* Sección de bienvenida */
-header {
+/* Sección Bienvenida */
+#inicio {
     text-align: center;
-    padding: 20px;
-    background-color: #d4a29c;
-    color: white;
+    padding: 50px 0;
 }
 
-h1 {
-    font-size: 3em;
-    color: white;
+#inicio h2 {
+    font-family: 'Cursive', sans-serif;
+    font-size: 48px;
+    color: #333;
 }
 
-p {
-    font-size: 1.2em;
-    color: white;
-}
-
-.bienvenida-imagen {
-    width: 100%;
+#inicio img {
+    width: 80%;
+    max-width: 800px;
     height: auto;
-    max-height: 400px;
-    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Sección Mezclas, Menú y Sucursales */
+.contenido {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contenido h2 {
+    font-family: 'Cursive', sans-serif;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.mezclas-lista, .menu-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.mezcla, .producto {
+    width: 250px;
+    margin: 10px;
+    background-color: #f5f5f5;
+    padding: 20px;
     border-radius: 10px;
-    margin-top: 20px;
-}
-
-/* Sección de Introducción */
-.introduccion {
     text-align: center;
-    padding: 40px;
-    background-color: #f8d6cc;
 }
 
-.introduccion h2 {
-    font-size: 2em;
-    color: #3c2a21;
+.mezcla h3, .producto h3 {
+    font-family: 'Cursive', sans-serif;
+    font-size: 24px;
+    color: #333;
 }
 
-.boton-descargar {
-    padding: 10px 20px;
-    background-color: #3c2a21;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 50px; /* Bordes redondeados */
-    font-size: 1.2em;
-    cursor: pointer;
-    font-family: 'Dancing Script', cursive;
-    transition: background-color 0.3s ease; /* Suaviza el cambio de color */
-}
-
-.boton-descargar:hover {
-    background-color: #d4a29c; /* Color de hover */
-}
-
-/* Galería de imágenes */
-#galeria {
-    text-align: center;
-    padding: 40px;
-    background-color: #fff;
-}
-
-#galeria h2 {
-    font-size: 2em;
-    color: #3c2a21;
-}
-
-.galeria .imagenes {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.galeria img {
-    width: 100%;
-    height: auto;
-    border-radius: 15px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.galeria img:hover {
-    transform: scale(1.05); /* Efecto hover en imágenes */
-}
-
-/* Menú interactivo */
-#menu {
-    text-align: center;
-    padding: 40px;
-    background-color: #fff;
-}
-
-#menu h2 {
-    font-size: 2em;
-    color: #3c2a21;
-}
-
-.carousel {
+/* Sección Búsqueda y Cuenta */
+#busqueda-cuenta {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 30px;
+    justify-content: space-around;
+    padding: 20px 0;
+    background-color: #333;
 }
 
-.flecha {
-    background-color: transparent;
-    color: #3c2a21;
-    font-size: 2.5em;
-    padding: 0 15px;
-    border: none;
-    cursor: pointer;
-}
-
-.flecha:focus {
-    outline: none;
-}
-
-.items {
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
+#busqueda-cuenta input {
     width: 60%;
-}
-
-.items .producto {
-    margin: 0 30px;
-    background-color: #f8d6cc;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
-    font-family: 'Dancing Script', cursive; /* Tipografía cursiva */
-}
-
-.producto h3 {
-    font-size: 1.5em;
-    color: #3c2a21;
-}
-
-.producto p {
-    font-size: 1.1em;
-    color: #6f4f3e;
-}
-
-/* Contacto */
-#contacto {
-    text-align: center;
-    padding: 40px;
-    background-color: #f8d6cc;
-}
-
-#contacto h2 {
-    font-size: 2em;
-    color: #3c2a21;
-}
-
-/* Pie de página */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #3c2a21;
-    color: #fff;
-    font-family: 'Dancing Script', cursive;
-}
-
-footer p {
-    font-size: 1.1em;
-}
-
-/* Barra de navegación de búsqueda */
-nav .busqueda input {
-    padding: 8px;
-    font-size: 1em;
-    width: 200px;
-    border-radius: 5px;
+    padding: 10px;
+    border-radius: 10px;
     border: none;
+}
+
+#busqueda-cuenta a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
