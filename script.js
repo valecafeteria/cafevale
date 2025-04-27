@@ -1,29 +1,39 @@
-// Función para realizar la búsqueda
-document.querySelector('#busqueda-cuenta input').addEventListener('input', function(e) {
-    let query = e.target.value.toLowerCase();
-    let productos = document.querySelectorAll('.producto, .mezcla');
-    productos.forEach(function(producto) {
-        let nombre = producto.querySelector('h3').textContent.toLowerCase();
-        if (nombre.includes(query)) {
-            producto.style.display = 'block';
-        } else {
-            producto.style.display = 'none';
-        }
-    });
-});
+// script.js
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-// Función para mostrar u ocultar el contenido de cada sección al hacer clic en los enlaces del menú
-document.querySelectorAll('header nav ul li a').forEach(function(link) {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-        let targetId = this.getAttribute('href').substring(1);
-        let secciones = document.querySelectorAll('.contenido, #inicio');
-        secciones.forEach(function(seccion) {
-            seccion.style.display = 'none';
-        });
-        document.getElementById(targetId).style.display = 'block';
-    });
-});
+function updateCartCount() {
+  document.getElementById('cart-count').textContent = cart.length;
+}
 
-// Mostrar la primera sección (Inicio) por defecto
-document.getElementById('inicio').style.display = 'block';
+function addToCart(e) {
+  const btn = e.currentTarget;
+  const item = {
+    id: btn.dataset.id,
+    name: btn.dataset.name,
+    price: parseFloat(btn.dataset.price)
+  };
+  cart.push(item);
+  localStorage.setItem('cart', JSON.stringify(cart));
+  updateCartCount();
+}
+
+function openCart() {
+  let summary = 'Tu carrito:\n\n';
+  let total = 0;
+  cart.forEach((i, idx) => {
+    summary += `${idx+1}. ${i.name} – ₱${i.price.toFixed(2)}\n`;
+    total += i.price;
+  });
+  summary += `\nTotal: ₱${total.toFixed(2)}`;
+  alert(summary);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.add-to-cart')
+    .forEach(btn => btn.addEventListener('click', addToCart));
+
+  document.getElementById('open-cart')
+    .addEventListener('click', openCart);
+
+  updateCartCount();
+});
