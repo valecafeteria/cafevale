@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Cafetería Vale – Menú</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="mezclas.html">Mezclas</a></li>
+        <li><a href="menu.html" class="active">Menú</a></li>
+        <li><a href="sucursales.html">Sucursales</a></li>
+      </ul>
+      <div class="nav-actions">
+        <input type="search" placeholder="Buscar…">
+        <button class="icon-btn">Mi Cuenta</button>
+        <button class="icon-btn" id="open-cart">Tu Pedido (<span id="cart-count">0</span>)</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Menú de Productos</h1>
+    <div class="grid">
+      <!-- Productos 1 al 10 -->
+      <!-- Producto 1 -->
+      <div class="card">
+        <img src="images/product1.jpg" alt="Capuchino Clásico">
+        <h2>Capuchino Clásico</h2>
+        <p class="price">₱45.00</p>
+        <button class="btn add-to-cart" data-id="1" data-name="Capuchino Clásico" data-price="45">Agregar al carrito</button>
+      </div>
+      <!-- Repite para product2…product10 cambiando id, nombre, price y src -->
+    </div>
+  </main>
+
+  <footer>
+    <p>Gracias por tu visita, vuelve pronto a Cafetería Vale.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
