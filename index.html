@@ -2,41 +2,35 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Cafetería Vale – Inicio</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafetería Vale</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
+    <h1>Bienvenido a Cafetería Vale</h1>
+    <p class="frase">"El sabor que despierta tus sentidos."</p>
+    <img src="img/cafe_bienvenida.jpg" alt="Café delicioso">
     <nav>
-      <ul class="nav-list">
-        <li><a href="index.html" class="active">Inicio</a></li>
+      <ul>
         <li><a href="mezclas.html">Mezclas</a></li>
         <li><a href="menu.html">Menú</a></li>
         <li><a href="sucursales.html">Sucursales</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="#" onclick="mostrarCarrito()">Su pedido</a></li>
       </ul>
-      <div class="nav-actions">
-        <input type="search" placeholder="Buscar…">
-        <button class="icon-btn">Mi Cuenta</button>
-        <button class="icon-btn" id="open-cart">Tu Pedido (<span id="cart-count">0</span>)</button>
-      </div>
     </nav>
   </header>
 
   <main>
-    <section class="welcome">
-      <img src="images/welcome.jpg" alt="Bienvenido a Cafetería Vale">
-    </section>
-    <section class="download-menu">
-      <button onclick="window.location.href='menu.pdf'" download>Descargar menú</button>
-    </section>
+    <button onclick="descargarMenu()">Descargar Menú PDF</button>
+    <section id="carrito" style="display:none;"></section>
   </main>
 
   <footer>
     <p>Gracias por tu visita, vuelve pronto a Cafetería Vale.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
