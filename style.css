@@ -1,59 +1,131 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f3f0eb;
-  color: #2d1f0f;
+/* Fuente vintage */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-header {
-  background-color: #4e342e;
+body {
+  font-family: 'Playfair Display', serif;
+  background-color: #fffaf3;
+  color: #2c1c13;
+  line-height: 1.6;
+}
+
+/* Top bar de envíos */
+.top-bar {
+  background-color: #c4b69f;
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 8px;
+  font-size: 0.9rem;
 }
 
-nav ul {
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 15px 30px;
+  border-bottom: 1px solid #ccc;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c1c13;
+}
+
+.nav-links {
   list-style: none;
   display: flex;
-  justify-content: center;
-  padding: 0;
+  gap: 20px;
 }
 
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: white;
+.nav-links li a {
   text-decoration: none;
+  color: #2c1c13;
   font-weight: bold;
+  transition: color 0.3s;
 }
 
-.frase {
-  font-style: italic;
+.nav-links li a:hover {
+  color: #a67b5b;
+}
+
+.icons button {
+  font-size: 1.3rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Sección de bienvenida */
+.bienvenida {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.bienvenida h2 {
+  font-size: 2rem;
   margin-bottom: 10px;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  margin-top: 10px;
+.bienvenida p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
 }
 
-button {
-  background-color: #795548;
+.boton-descarga {
+  display: inline-block;
+  background-color: #a67b5b;
   color: white;
   padding: 10px 20px;
-  border: none;
-  margin: 20px;
-  cursor: pointer;
-  border-radius: 5px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  transition: background-color 0.3s;
 }
 
+.boton-descarga:hover {
+  background-color: #8c5c3c;
+}
+
+.bienvenida img {
+  max-width: 90%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Footer */
 footer {
-  background-color: #3e2723;
-  color: white;
   text-align: center;
-  padding: 15px;
+  padding: 20px;
+  background-color: #2c1c13;
+  color: white;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .bienvenida h2 {
+    font-size: 1.5rem;
+  }
 }
