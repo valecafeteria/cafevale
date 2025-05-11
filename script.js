@@ -1,12 +1,24 @@
-function mostrarCarrito() {
-  const carrito = document.getElementById("carrito");
-  carrito.style.display = carrito.style.display === "none" ? "block" : "none";
-  carrito.innerHTML = "<p>Tu carrito está vacío por ahora.</p>";
+let carrito = [];
+
+function agregarAlCarrito(producto, precio) {
+  carrito.push({ producto, precio });
+  alert(`Agregado: ${producto} - $${precio}`);
 }
 
-function descargarMenu() {
-  const link = document.createElement("a");
-  link.href = "docs/menu.pdf";
-  link.download = "menu_cafeteria_vale.pdf";
-  link.click();
+function abrirCarrito() {
+  if (carrito.length === 0) {
+    alert("Tu carrito está vacío.");
+    return;
+  }
+
+  let resumen = "Tu pedido:\n";
+  let total = 0;
+
+  carrito.forEach(item => {
+    resumen += `${item.producto} - $${item.precio}\n`;
+    total += item.precio;
+  });
+
+  resumen += `\nTotal: $${total}`;
+  alert(resumen);
 }
