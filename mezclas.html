@@ -2,21 +2,57 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Mezclas - Cafetería Vale</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mezclas | Cafetería Vale</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header><h1>Nuestras Mezclas</h1></header>
-  <main>
-    <section>
-      <article>
-        <h2>Mezcla Italiana</h2>
-        <img src="img/mezcla1.jpg" alt="Mezcla italiana">
-        <p>$65 MXN</p>
-        <button>Agregar al carrito</button>
-      </article>
-      <!-- 4 mezclas más similares aquí -->
-    </section>
-  </main>
+
+  <div class="top-bar">Envíos gratis a todo México en compras mayores a $890</div>
+
+  <nav class="navbar">
+    <div class="logo">CAFETERÍA VALE</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="mezclas.html">Mezclas</a></li>
+      <li><a href="menu.html">Menú</a></li>
+      <li><a href="sucursales.html">Sucursales</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <div class="icons">
+      <button onclick="abrirCarrito()">🛒</button>
+    </div>
+  </nav>
+
+  <section class="bienvenida">
+    <h2>Nuestras Mezclas</h2>
+    <p>Prueba nuestras mezclas con sabores únicos y aromas exquisitos.</p>
+  </section>
+
+  <section class="productos">
+    <div class="producto">
+      <img src="img/cafe-dalia.jpg" alt="Café Dalia">
+      <h3>Café Dalia</h3>
+      <p>$335.00 / 0.34 kg</p>
+      <p>Notas a piloncillo, cacao, caramelo y nuez.</p>
+      <button class="boton-descarga" onclick="agregarAlCarrito('Café Dalia', 335)">Comprar</button>
+    </div>
+
+    <div class="producto">
+      <img src="img/cafe-intenso.jpg" alt="Café Intenso">
+      <h3>Café Intenso</h3>
+      <p>$310.00 / 0.34 kg</p>
+      <p>Mezcla fuerte, tostado oscuro, notas a chocolate amargo.</p>
+      <button class="boton-descarga" onclick="agregarAlCarrito('Café Intenso', 310)">Comprar</button>
+    </div>
+
+    <!-- Puedes duplicar esto para más cafés, hasta 15 productos en total -->
+  </section>
+
+  <footer>
+    &copy; 2025 Cafetería Vale. Todos los derechos reservados.
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
