@@ -1,36 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cafetería Vale</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/script.js"></script>
 </head>
 <body>
   <header>
-    <h1>Bienvenido a Cafetería Vale</h1>
-    <p class="frase">"El sabor que despierta tus sentidos."</p>
-    <img src="img/cafe_bienvenida.jpg" alt="Café delicioso">
-    <nav>
-      <ul>
+    <div class="top-bar">
+      Envíos gratis * CDMX: compras mayores a $890 / Resto del país: $1,499+
+    </div>
+    <nav class="navbar">
+      <h1 class="logo">CAFETERÍA VALE</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
         <li><a href="mezclas.html">Mezclas</a></li>
         <li><a href="menu.html">Menú</a></li>
         <li><a href="sucursales.html">Sucursales</a></li>
         <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="#" onclick="mostrarCarrito()">Su pedido</a></li>
       </ul>
+      <div class="icons">
+        <button id="carrito-btn">🛒</button>
+      </div>
     </nav>
   </header>
 
   <main>
-    <button onclick="descargarMenu()">Descargar Menú PDF</button>
-    <section id="carrito" style="display:none;"></section>
+    <section class="bienvenida">
+      <h2>Bienvenido, Bienvenida a Cafetería Vale</h2>
+      <p>Ven y prueba lo que nos apasiona: el mejor café en un ambiente único.</p>
+      <a href="pdf/menu.pdf" class="boton-descarga" download>Descargar menú</a>
+      <img src="images/cafe-bienvenida.jpg" alt="Taza de café elegante" />
+    </section>
   </main>
 
   <footer>
-    <p>Gracias por tu visita, vuelve pronto a Cafetería Vale.</p>
+    <p>&copy; 2025 Cafetería Vale. Todos los derechos reservados.</p>
   </footer>
-
-  <script src="js/script.js"></script>
 </body>
 </html>
