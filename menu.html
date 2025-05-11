@@ -1,22 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Menú - Cafetería Vale</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menú | Cafetería Vale</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header><h1>Menú</h1></header>
-  <main>
-    <section>
-      <article>
-        <h2>Latte</h2>
-        <img src="img/latte.jpg" alt="Latte">
-        <p>$55 MXN</p>
-        <button>Agregar al carrito</button>
-      </article>
-      <!-- 4 productos más similares aquí -->
-    </section>
-  </main>
+
+  <div class="top-bar">Explora nuestro delicioso menú de bebidas y acompañamientos</div>
+
+  <nav class="navbar">
+    <div class="logo">CAFETERÍA VALE</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="mezclas.html">Mezclas</a></li>
+      <li><a href="menu.html">Menú</a></li>
+      <li><a href="sucursales.html">Sucursales</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <section class="bienvenida">
+    <h2>Menú</h2>
+    <p>Descubre nuestras bebidas y complementos.</p>
+    <a class="boton-descarga" href="docs/menu.pdf" download>Descargar menú en PDF</a>
+  </section>
+
+  <section class="productos">
+    <div class="producto">
+      <img src="img/latte.jpg" alt="Latte">
+      <h3>Latte</h3>
+      <p>$65.00</p>
+      <button onclick="agregarAlCarrito('Latte', 65)">Agregar</button>
+    </div>
+
+    <div class="producto">
+      <img src="img/croissant.jpg" alt="Croissant">
+      <h3>Croissant</h3>
+      <p>$40.00</p>
+      <button onclick="agregarAlCarrito('Croissant', 40)">Agregar</button>
+    </div>
+
+    <div class="producto">
+      <img src="img/tizana.jpg" alt="Tizana">
+      <h3>Tizana</h3>
+      <p>$55.00</p>
+      <button onclick="agregarAlCarrito('Tizana', 55)">Agregar</button>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Cafetería Vale.
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
