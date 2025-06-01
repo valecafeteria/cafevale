@@ -237,15 +237,18 @@ footer {
   font-size: 0.9rem;
   margin-top: 40px;
 }
+
 #carrito-contenedor {
   position: fixed;
   top: 60px;
   right: -300px;
-  width: 280px;
-  background: #fff;
-  border-left: 2px solid #ccc;
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  border-left: 2px solid #6B4F3A;
   padding: 20px;
-  transition: right 0.3s ease;
+  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease-in-out;
   z-index: 1000;
 }
 
@@ -253,29 +256,19 @@ footer {
   right: 0;
 }
 
-#carrito-contenedor h3 {
-  margin-top: 0;
-}
-
-#lista-carrito {
-  list-style: none;
-  padding: 0;
+#carrito-toggle {
+  position: fixed;
+  top: 100px;
+  right: 0;
+  background-color: #6B4F3A;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1001;
 }
 
 #lista-carrito li {
-  display: flex;
-  justify-content: space-between;
   margin-bottom: 10px;
-}
-
-.vaciar-carrito {
-  margin-top: 10px;
-  width: 100%;
-  background-color: #c0392b;
-  color: white;
-  border: none;
-  padding: 8px;
-  cursor: pointer;
 }
 
 /* Responsivo */
