@@ -19,9 +19,13 @@
       <li><a href="sucursales.html">Sucursales</a></li>
       <li><a href="contacto.html">Contacto</a></li>
     </ul>
-    <div class="icons">
-      <button onclick="abrirCarrito()">🛒</button>
-    </div>
+    <div id="carrito-toggle" onclick="abrirCarrito()">🛒</div>
+
+<div id="carrito-contenedor">
+  <h2>Tu pedido</h2>
+  <ul id="lista-carrito"></ul>
+  <button onclick="vaciarCarrito()">Vaciar carrito</button>
+</div>
   </nav>
 
   <section class="bienvenida">
