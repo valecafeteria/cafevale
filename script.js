@@ -1,43 +1,66 @@
-let carrito = [];
+const carrito = [];
 
-function agregarAlCarrito(nombreProductoBase, precioBase, idProducto) {
-  const tamaño = document.querySelector(`#${idProducto} select[name="tamaño"]`).value;
-  const leche = document.querySelector(`#${idProducto} select[name="leche"]`).value;
-  const complemento = document.querySelector(`#${idProducto} select[name="complemento"]`).value;
+function agregarProductoPersonalizado(nombreProductoBase) {
+  const id = nombreProductoBase.toLowerCase(); // Ej: "Latte" → "latte"
+  
+  // Obtener valores de los selects
+  const tamañoSelect = document.getElementById(`tamano-${id}`);
+  const lecheSelect = document.getElementById(`leche-${id}`);
+  const complementoSelect = document.getElementById(`extra-${id}`);
 
-  let precioFinal = precioBase;
-
-  // Ajuste de precio por tamaño
-  if (tamaño === "Mediano") precioFinal += 5;
-  else if (tamaño === "Grande") precioFinal += 10;
-
-  // Ajuste de precio por leche
-  if (leche === "Deslactosada" || leche === "Vegetal") precioFinal += 5;
-
-  // Ajuste de precio por complemento
-  if (complemento !== "Ninguno") precioFinal += 10;
-
-  const productoCompleto = `${nombreProductoBase} (${tamaño}, Leche: ${leche}, Comp: ${complemento})`;
-
-  carrito.push({ producto: productoCompleto, precio: precioFinal });
-
-  alert(`Agregado: ${productoCompleto} - $${precioFinal}`);
-}
-
-function abrirCarrito() {
-  if (carrito.length === 0) {
-    alert("Tu carrito está vacío.");
+  if (!tamañoSelect || !lecheSelect || !complementoSelect) {
+    alert("Error: No se encontraron los selectores del producto.");
     return;
   }
 
-  let resumen = "Tu pedido:\n";
-  let total = 0;
+  const tamaño = tamañoSelect.value;
+  const leche = lecheSelect.value;
+  const complemento = complementoSelect.value;
 
-  carrito.forEach(item => {
-    resumen += `${item.producto} - $${item.precio}\n`;
+  let precioFinal = parseFloat(tamaño); // Precio base por tamaño
+
+  // Ajuste por tipo de leche
+  if (leche === "Deslactosada" || leche === "Avena" || leche === "Almendra") {
+    precioFinal += 5;
+  }
+
+  // Ajuste por complemento
+  if (complemento !== "Ninguno") {
+    precioFinal += 10;
+  }
+
+  const productoCompleto = `${nombreProductoBase} (Tamaño: ${tamañoSelect.options[tamañoSelect.selectedIndex].text}, Leche: ${leche}, Extra: ${complemento})`;
+
+  carrito.push({ producto: productoCompleto, precio: precioFinal });
+
+  alert(`Agregado al carrito:\n${productoCompleto}\nTotal: $${precioFinal}`);
+}
+
+function mostrarCarrito() {
+  const contenedor = document.getElementById("carrito-contenedor");
+  contenedor.innerHTML = "<h3>Carrito de compras:</h3>";
+
+  if (carrito.length === 0) {
+    contenedor.innerHTML += "<p>El carrito está vacío.</p>";
+    return;
+  }
+
+  let total = 0;
+  const lista = document.createElement("ul");
+
+  carrito.forEach((item, index) => {
+    const li = document.createElement("li");
+    li.innerHTML = `${index + 1}. ${item.producto} - $${item.precio} 
+      <button onclick="eliminarProducto(${index})">Eliminar</button>`;
+    lista.appendChild(li);
     total += item.precio;
   });
 
-  resumen += `\nTotal: $${total}`;
-  alert(resumen);
+  contenedor.appendChild(lista);
+  contenedor.innerHTML += `<p><strong>Total: $${total}</strong></p>`;
+}
+
+function eliminarProducto(index) {
+  carrito.splice(index, 1);
+  mostrarCarrito();
 }
