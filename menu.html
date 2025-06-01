@@ -28,28 +28,312 @@
   </section>
 
   <section class="productos">
-    <div class="producto">
-      <img src="latte.jpg" alt="Latte">
-      <h3>Latte</h3>
-      <p>$65.00</p>
-      <button onclick="agregarAlCarrito('Latte', 65)">Agregar</button>
-    </div>
+<!-- Producto: Latte -->
+<div class="producto">
+  <img src="latte.jpg" alt="Latte">
+  <h3>Latte</h3>
+  <p>Desde $65.00</p>
+  <label>Tamaño:
+    <select id="tamano-latte">
+      <option value="65">Chico - $65</option>
+      <option value="70">Mediano - $70</option>
+      <option value="75">Grande - $75</option>
+    </select>
+  </label>
+  <label>Leche:
+    <select id="leche-latte">
+      <option>Entera</option>
+      <option>Deslactosada</option>
+      <option>Avena</option>
+      <option>Almendra</option>
+    </select>
+  </label>
+  <label>Complemento:
+    <select id="extra-latte">
+      <option>Ninguno</option>
+      <option>Canela</option>
+      <option>Caramelo</option>
+      <option>Chocolate</option>
+    </select>
+  </label>
+  <button onclick="agregarProductoPersonalizado('Latte')">Agregar</button>
+</div>
 
-    <div class="producto">
-      <img src="croissant.jpg" alt="Croissant">
-      <h3>Croissant</h3>
-      <p>$40.00</p>
-      <button onclick="agregarAlCarrito('Croissant', 40)">Agregar</button>
-    </div>
+<!-- Producto: Capuchino -->
+<div class="producto">
+  <img src="capuchino.jpg" alt="Capuchino">
+  <h3>Capuchino</h3>
+  <p>Desde $65.00</p>
+  <label>Tamaño:
+    <select id="tamano-capuchino">
+      <option value="65">Chico - $65</option>
+      <option value="70">Mediano - $70</option>
+      <option value="75">Grande - $75</option>
+    </select>
+  </label>
+  <label>Leche:
+    <select id="leche-capuchino">
+      <option>Entera</option>
+      <option>Deslactosada</option>
+      <option>Avena</option>
+      <option>Almendra</option>
+    </select>
+  </label>
+  <label>Complemento:
+    <select id="extra-capuchino">
+      <option>Ninguno</option>
+      <option>Canela</option>
+      <option>Caramelo</option>
+      <option>Chocolate</option>
+    </select>
+  </label>
+  <button onclick="agregarProductoPersonalizado('Capuchino')">Agregar</button>
+</div>
 
-    <div class="producto">
-      <img src="tizana.jpg" alt="Tizana">
-      <h3>Tizana</h3>
-      <p>$55.00</p>
-      <button onclick="agregarAlCarrito('Tizana', 55)">Agregar</button>
-    </div>
-  </section>
+<!-- Producto: Espresso -->
+<div class="producto">
+  <img src="espresso.jpg" alt="Espresso">
+  <h3>Espresso</h3>
+  <p>Desde $55.00</p>
+  <label>Tamaño:
+    <select id="tamano-espresso">
+      <option value="55">Chico - $55</option>
+      <option value="60">Mediano - $60</option>
+      <option value="65">Grande - $65</option>
+    </select>
+  </label>
+  <label>Leche:
+    <select id="leche-espresso">
+      <option>Entera</option>
+      <option>Deslactosada</option>
+      <option>Avena</option>
+      <option>Almendra</option>
+    </select>
+  </label>
+  <label>Complemento:
+    <select id="extra-espresso">
+      <option>Ninguno</option>
+      <option>Canela</option>
+      <option>Caramelo</option>
+      <option>Chocolate</option>
+    </select>
+  </label>
+  <button onclick="agregarProductoPersonalizado('Espresso')">Agregar</button>
+</div>
 
-  <script src="script.js"></script>
-</body>
-</html>
+<!-- Producto: Americano -->
+<div class="producto">
+  <img src="americano.jpg" alt="Americano">
+  <h3>Americano</h3>
+  <p>Desde $50.00</p>
+  <label>Tamaño:
+    <select id="tamano-americano">
+      <option value="50">Chico - $50</option>
+      <option value="55">Mediano - $55</option>
+      <option value="60">Grande - $60</option>
+    </select>
+  </label>
+  <label>Leche:
+    <select id="leche-americano">
+      <option>Entera</option>
+      <option>Deslactosada</option>
+      <option>Avena</option>
+      <option>Almendra</option>
+    </select>
+  </label>
+  <label>Complemento:
+    <select id="extra-americano">
+      <option>Ninguno</option>
+      <option>Canela</option>
+      <option>Caramelo</option>
+      <option>Chocolate</option>
+    </select>
+  </label>
+  <button onclick="agregarProductoPersonalizado('Americano')">Agregar</button>
+</div>
+
+<!-- Producto: Mocha -->
+<div class="producto">
+  <img src="mocha.jpg" alt="Mocha">
+  <h3>Mocha</h3>
+  <p>Desde $70.00</p>
+  <label>Tamaño:
+    <select id="tamano-mocha">
+      <option value="70">Chico - $70</option>
+      <option value="75">Mediano - $75</option>
+      <option value="80">Grande - $80</option>
+    </select>
+  </label>
+  <label>Leche:
+    <select id="leche-mocha">
+      <option>Entera</option>
+      <option>Deslactosada</option>
+      <option>Avena</option>
+      <option>Almendra</option>
+    </select>
+  </label>
+  <label>Complemento:
+    <select id="extra-mocha">
+      <option>Ninguno</option>
+      <option>Canela</option>
+      <option>Caramelo</option>
+      <option>Chocolate</option>
+    </select>
+  </label>
+  <button onclick="agregarProductoPersonalizado('Mocha')">Agregar</button>
+</div>
+
+<!-- Producto: Vainilla -->
+<div class="producto">
+  <img src="vainilla.jpg" alt="Vainilla">
+  <h3>Vainilla</h3>
+  <p>Desde $70.00</p>
+  <label>Tamaño:
+    <select id="tamano-vainilla">
+      <option value="70">Chico - $70</option>
+      <option value="75">Mediano - $75</option>
+      <option value="80">Grande - $80</option>
+    </select>
+  </label>
+  <label>Leche:
+    <select id="leche-vainilla">
+      <option>Entera</option>
+      <option>Deslactosada</option>
+      <option>Avena</option>
+      <option>Almendra</option>
+    </select>
+  </label>
+  <label>Complemento:
+    <select id="extra-vainilla">
+      <option>Ninguno</option>
+      <option>Canela</option>
+      <option>Caramelo</option>
+      <option>Chocolate</option>
+    </select>
+  </label>
+  <button onclick="agregarProductoPersonalizado('Vainilla')">Agregar</button>
+</div>
+
+<!-- Producto: Caramelo -->
+<div class="producto">
+  <img src="caramelo.jpg" alt="Caramelo">
+  <h3>Caramelo</h3>
+  <p>Desde $70.00</p>
+  <label>Tamaño:
+    <select id="tamano-caramelo">
+      <option value="70">Chico - $70</option>
+      <option value="75">Mediano - $75</option>
+      <option value="80">Grande - $80</option>
+    </select>
+  </label>
+  <label>Leche:
+    <select id="leche-caramelo">
+      <option>Entera</option>
+      <option>Deslactosada</option>
+      <option>Avena</option>
+      <option>Almendra</option>
+    </select>
+  </label>
+  <label>Complemento:
+    <select id="extra-caramelo">
+      <option>Ninguno</option>
+      <option>Canela</option>
+      <option>Caramelo</option>
+      <option>Chocolate</option>
+    </select>
+  </label>
+  <button onclick="agregarProductoPersonalizado('Caramelo')">Agregar</button>
+</div>
+
+<!-- Producto: Café Helado -->
+<div class="producto">
+  <img src="helado.jpg" alt="Café Helado">
+  <h3>Café Helado</h3>
+  <p>Desde $75.00</p>
+  <label>Tamaño:
+    <select id="tamano-helado">
+      <option value="75">Chico - $75</option>
+      <option value="80">Mediano - $80</option>
+      <option value="85">Grande - $85</option>
+    </select>
+  </label>
+  <label>Leche:
+    <select id="leche-helado">
+      <option>Entera</option>
+      <option>Deslactosada</option>
+      <option>Avena</option>
+      <option>Almendra</option>
+    </select>
+  </label>
+  <label>Complemento:
+    <select id="extra-helado">
+      <option>Ninguno</option>
+      <option>Canela</option>
+      <option>Caramelo</option>
+      <option>Chocolate</option>
+    </select>
+  </label>
+  <button onclick="agregarProductoPersonalizado('Helado')">Agregar</button>
+</div>
+
+<!-- Producto: Frappe -->
+<div class="producto">
+  <img src="frappe.jpg" alt="Frappe">
+  <h3>Frappe</h3>
+  <p>Desde $80.00</p>
+  <label>Tamaño:
+    <select id="tamano-frappe">
+      <option value="80">Chico - $80</option>
+      <option value="85">Mediano - $85</option>
+      <option value="90">Grande - $90</option>
+    </select>
+  </label>
+  <label>Leche:
+    <select id="leche-frappe">
+      <option>Entera</option>
+      <option>Deslactosada</option>
+      <option>Avena</option>
+      <option>Almendra</option>
+    </select>
+  </label>
+  <label>Complemento:
+    <select id="extra-frappe">
+      <option>Ninguno</option>
+      <option>Canela</option>
+      <option>Caramelo</option>
+      <option>Chocolate</option>
+    </select>
+  </label>
+  <button onclick="agregarProductoPersonalizado('Frappe')">Agregar</button>
+</div>
+
+<!-- Producto: Chai Latte -->
+<div class="producto">
+  <img src="chai.jpg" alt="Chai Latte">
+  <h3>Chai Latte</h3>
+  <p>Desde $75.00</p>
+  <label>Tamaño:
+    <select id="tamano-chai">
+      <option value="75">Chico - $75</option>
+      <option value="80">Mediano - $80</option>
+      <option value="85">Grande - $85</option>
+    </select>
+  </label>
+  <label>Leche:
+    <select id="leche-chai">
+      <option>Entera</option>
+      <option>Deslactosada</option>
+      <option>Avena</option>
+      <option>Almendra</option>
+    </select>
+  </label>
+  <label>Complemento:
+    <select id="extra-chai">
+      <option>Ninguno</option>
+      <option>Canela</option>
+      <option>Caramelo</option>
+      <option>Chocolate</option>
+    </select>
+  </label>
+  <button onclick="agregarProductoPersonalizado('Chai')">Agregar</button>
+</div>
