@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cafetería Vale - Menú Completo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú | Cafetería Vale</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <nav>
-    <a href="index.html">Inicio</a>
-    <a href="mezclas.html">Mezclas</a>
-    <a href="menu.html">Menú</a>
-    <a href="sucursales.html">Sucursales</a>
+  <div class="top-bar">Envíos gratis a todo México en compras mayores a $890</div>
+
+  <nav class="navbar">
+    <div class="logo">CAFETERÍA VALE</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="mezclas.html">Mezclas</a></li>
+      <li><a href="menu.html">Menú</a></li>
+      <li><a href="sucursales.html">Sucursales</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <div class="icons">
+      <button onclick="abrirCarrito()">🛒</button>
+    </div>
   </nav>
+
+  <section class="bienvenida">
+    <h2>Nuestras Menú</h2>
+    <p>Escoge alguna bebida o alimento de nuestro menú.</p>
+  </section>
 
   <div class="contenedor-principal">
     <main class="menu-productos">
