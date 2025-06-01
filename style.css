@@ -237,6 +237,46 @@ footer {
   font-size: 0.9rem;
   margin-top: 40px;
 }
+#carrito-contenedor {
+  position: fixed;
+  top: 60px;
+  right: -300px;
+  width: 280px;
+  background: #fff;
+  border-left: 2px solid #ccc;
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+#carrito-contenedor.abierto {
+  right: 0;
+}
+
+#carrito-contenedor h3 {
+  margin-top: 0;
+}
+
+#lista-carrito {
+  list-style: none;
+  padding: 0;
+}
+
+#lista-carrito li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.vaciar-carrito {
+  margin-top: 10px;
+  width: 100%;
+  background-color: #c0392b;
+  color: white;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}
 
 /* Responsivo */
 @media (max-width: 768px) {
