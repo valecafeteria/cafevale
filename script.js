@@ -1,66 +1,57 @@
-const carrito = [];
+let carrito = [];
 
-function agregarProductoPersonalizado(nombreProductoBase) {
-  const id = nombreProductoBase.toLowerCase(); // Ej: "Latte" → "latte"
-  
-  // Obtener valores de los selects
-  const tamañoSelect = document.getElementById(`tamano-${id}`);
-  const lecheSelect = document.getElementById(`leche-${id}`);
-  const complementoSelect = document.getElementById(`extra-${id}`);
+function agregarProductoPersonalizado(nombre) {
+  const tamano = document.querySelector(`#tamano-${formatearId(nombre)}`);
+  const leche = document.querySelector(`#leche-${formatearId(nombre)}`);
+  const extra = document.querySelector(`#extra-${formatearId(nombre)}`);
 
-  if (!tamañoSelect || !lecheSelect || !complementoSelect) {
-    alert("Error: No se encontraron los selectores del producto.");
-    return;
-  }
+  const precio = parseFloat(tamano.value);
+  const detalle = `${nombre} (${tamano.options[tamano.selectedIndex].text}, ${leche ? leche.value : 'Sin leche'}, ${extra ? extra.value : 'Sin extra'})`;
 
-  const tamaño = tamañoSelect.value;
-  const leche = lecheSelect.value;
-  const complemento = complementoSelect.value;
+  const producto = {
+    nombre: detalle,
+    precio: precio
+  };
 
-  let precioFinal = parseFloat(tamaño); // Precio base por tamaño
-
-  // Ajuste por tipo de leche
-  if (leche === "Deslactosada" || leche === "Avena" || leche === "Almendra") {
-    precioFinal += 5;
-  }
-
-  // Ajuste por complemento
-  if (complemento !== "Ninguno") {
-    precioFinal += 10;
-  }
-
-  const productoCompleto = `${nombreProductoBase} (Tamaño: ${tamañoSelect.options[tamañoSelect.selectedIndex].text}, Leche: ${leche}, Extra: ${complemento})`;
-
-  carrito.push({ producto: productoCompleto, precio: precioFinal });
-
-  alert(`Agregado al carrito:\n${productoCompleto}\nTotal: $${precioFinal}`);
+  carrito.push(producto);
+  actualizarCarrito();
 }
 
-function mostrarCarrito() {
-  const contenedor = document.getElementById("carrito-contenedor");
-  contenedor.innerHTML = "<h3>Carrito de compras:</h3>";
+// Función para mostrar el carrito
+function actualizarCarrito() {
+  const lista = document.getElementById('lista-carrito');
+  lista.innerHTML = '';
 
-  if (carrito.length === 0) {
-    contenedor.innerHTML += "<p>El carrito está vacío.</p>";
-    return;
-  }
-
-  let total = 0;
-  const lista = document.createElement("ul");
-
-  carrito.forEach((item, index) => {
-    const li = document.createElement("li");
-    li.innerHTML = `${index + 1}. ${item.producto} - $${item.precio} 
-      <button onclick="eliminarProducto(${index})">Eliminar</button>`;
+  carrito.forEach((producto, index) => {
+    const li = document.createElement('li');
+    li.textContent = `${producto.nombre} - $${producto.precio}`;
+    const btnEliminar = document.createElement('button');
+    btnEliminar.textContent = '❌';
+    btnEliminar.onclick = () => eliminarProducto(index);
+    li.appendChild(btnEliminar);
     lista.appendChild(li);
-    total += item.precio;
   });
-
-  contenedor.appendChild(lista);
-  contenedor.innerHTML += `<p><strong>Total: $${total}</strong></p>`;
 }
 
+// Vaciar todo el carrito
+function vaciarCarrito() {
+  carrito = [];
+  actualizarCarrito();
+}
+
+// Eliminar producto individual
 function eliminarProducto(index) {
   carrito.splice(index, 1);
-  mostrarCarrito();
+  actualizarCarrito();
+}
+
+// Mostrar/Ocultar carrito
+function abrirCarrito() {
+  const contenedor = document.getElementById('carrito-contenedor');
+  contenedor.classList.toggle('abierto');
+}
+
+// Ayuda a manejar nombres con espacios y tildes
+function formatearId(nombre) {
+  return nombre.toLowerCase().replace(/ /g, '-').replace(/á/g, 'a').replace(/é/g, 'e').replace(/í/g, 'i').replace(/ó/g, 'o').replace(/ú/g, 'u').replace(/ñ/g, 'n');
 }
