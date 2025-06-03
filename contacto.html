@@ -1,14 +1,272 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contacto | Cafetería Vale</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+```
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f6f3;
+}
+
+.top-bar {
+  background-color: #8B4513;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.navbar {
+  background-color: #D2B48C;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #5D4E37;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #5D4E37;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #8B4513;
+}
+
+.bienvenida {
+  background: linear-gradient(135deg, #8B4513, #D2B48C);
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.bienvenida h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.bienvenida p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.contacto-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.info-contacto {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.info-contacto h3 {
+  color: #8B4513;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.contacto-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f9f7f4;
+  border-radius: 10px;
+  border-left: 4px solid #D2B48C;
+}
+
+.contacto-icon {
+  width: 40px;
+  height: 40px;
+  background: #8B4513;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  color: white;
+  font-weight: bold;
+}
+
+.contacto-texto h4 {
+  color: #5D4E37;
+  margin-bottom: 0.5rem;
+}
+
+.contacto-texto p {
+  color: #666;
+}
+
+.form-opiniones {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.form-opiniones h3 {
+  color: #8B4513;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #5D4E37;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  background-color: #fafafa;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #D2B48C;
+  background-color: white;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.btn-enviar {
+  background: linear-gradient(135deg, #8B4513, #D2B48C);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+.btn-enviar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(139, 69, 19, 0.3);
+}
+
+.mensaje-exito {
+  background: #d4edda;
+  color: #155724;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid #c3e6cb;
+  margin-bottom: 1rem;
+  display: none;
+}
+
+.horarios {
+  background: white;
+  margin: 2rem auto;
+  max-width: 600px;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.horarios h3 {
+  color: #8B4513;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.horario-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.horario-item:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .contacto-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 1rem;
+  }
+
+  .bienvenida h2 {
+    font-size: 2rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+```
+
+  </style>
 </head>
 <body>
 
-  <div class="top-bar">¿Tienes dudas o sugerencias? ¡Contáctanos!</div>
+  <div class="top-bar">¡Estamos aquí para ti! Contáctanos cuando gustes</div>
 
   <nav class="navbar">
     <div class="logo">CAFETERÍA VALE</div>
@@ -23,23 +281,173 @@
 
   <section class="bienvenida">
     <h2>Contáctanos</h2>
-    <p>Nos encantaría escuchar tu opinión o resolver tus dudas.</p>
+    <p>Queremos escucharte y mejorar cada día para ti.</p>
   </section>
 
-  <section class="formulario-contacto">
-    <form action="https://formspree.io/f/mwpbkrjr" method="POST">
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" required />
+  <div class="contacto-container">
+    <div class="info-contacto">
+      <h3>Nuestra Información</h3>
 
-      <label for="correo">Correo electrónico:</label>
-      <input type="email" id="correo" name="correo" required />
+```
+  <div class="contacto-item">
+    <div class="contacto-icon">📍</div>
+    <div class="contacto-texto">
+      <h4>Sucursal Tizayuca</h4>
+      <p>Av. Principal #101, Centro<br>Tizayuca, Hidalgo</p>
+    </div>
+  </div>
 
-      <label for="mensaje">Tu mensaje u opinión:</label>
-      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+  <div class="contacto-item">
+    <div class="contacto-icon">📍</div>
+    <div class="contacto-texto">
+      <h4>Sucursal Pachuca</h4>
+      <p>Blvd. Felipe Ángeles #220<br>Zona Plateada, Pachuca</p>
+    </div>
+  </div>
 
-      <button type="submit">Enviar</button>
-    </form>
-  </section>
+  <div class="contacto-item">
+    <div class="contacto-icon">📞</div>
+    <div class="contacto-texto">
+      <h4>Teléfonos</h4>
+      <p>Tizayuca: (771) 123-4567<br>Pachuca: (771) 765-4321</p>
+    </div>
+  </div>
+
+  <div class="contacto-item">
+    <div class="contacto-icon">📧</div>
+    <div class="contacto-texto">
+      <h4>Email</h4>
+      <p>info@cafeteriavale.com<br>valevale.pw@gmail.com</p>
+    </div>
+  </div>
+
+  <div class="contacto-item">
+    <div class="contacto-icon">📱</div>
+    <div class="contacto-texto">
+      <h4>Redes Sociales</h4>
+      <p>@CafeteriaVale<br>Facebook • Instagram • Twitter</p>
+    </div>
+  </div>
+</div>
+
+<div class="form-opiniones">
+  <h3>Envíanos tu Opinión</h3>
+  <div class="mensaje-exito" id="mensajeExito">
+    ¡Gracias por tu mensaje! Lo hemos recibido correctamente.
+  </div>
+  
+  <form id="formularioOpinion" action="mailto:opiniones@cafeteriavale.com" method="post" enctype="text/plain">
+    <div class="form-group">
+      <label for="nombre">Nombre Completo *</label>
+      <input type="text" id="nombre" name="nombre" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Correo Electrónico *</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="telefono">Teléfono</label>
+      <input type="tel" id="telefono" name="telefono">
+    </div>
+
+    <div class="form-group">
+      <label for="sucursal">Sucursal Visitada</label>
+      <select id="sucursal" name="sucursal">
+        <option value="">Selecciona una sucursal</option>
+        <option value="tizayuca">Tizayuca</option>
+        <option value="pachuca">Pachuca</option>
+        <option value="ambas">Ambas</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="tipoMensaje">Tipo de Mensaje</label>
+      <select id="tipoMensaje" name="tipoMensaje">
+        <option value="opinion">Opinión General</option>
+        <option value="felicitacion">Felicitación</option>
+        <option value="sugerencia">Sugerencia</option>
+        <option value="queja">Queja</option>
+        <option value="pregunta">Pregunta</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="mensaje">Tu Mensaje *</label>
+      <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos tu experiencia, sugerencias o cualquier comentario que tengas..." required></textarea>
+    </div>
+
+    <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+  </form>
+</div>
+```
+
+  </div>
+
+  <div class="horarios">
+    <h3>Horarios de Atención</h3>
+    <div class="horario-item">
+      <span><strong>Lunes a Viernes</strong></span>
+      <span>7:00 AM - 9:00 PM</span>
+    </div>
+    <div class="horario-item">
+      <span><strong>Sábados</strong></span>
+      <span>8:00 AM - 10:00 PM</span>
+    </div>
+    <div class="horario-item">
+      <span><strong>Domingos</strong></span>
+      <span>8:00 AM - 8:00 PM</span>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('formularioOpinion').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Obtener valores del formulario
+      const nombre = document.getElementById('nombre').value;
+      const email = document.getElementById('email').value;
+      const telefono = document.getElementById('telefono').value;
+      const sucursal = document.getElementById('sucursal').value;
+      const tipoMensaje = document.getElementById('tipoMensaje').value;
+      const mensaje = document.getElementById('mensaje').value;
+      
+      // Crear el cuerpo del email
+      const cuerpoEmail = `
+Nuevo mensaje de contacto - Cafetería Vale
+
+Nombre: ${nombre}
+Email: ${email}
+Teléfono: ${telefono || 'No proporcionado'}
+Sucursal: ${sucursal || 'No especificada'}
+Tipo de mensaje: ${tipoMensaje}
+
+Mensaje:
+${mensaje}
+
+---
+Enviado desde el formulario de contacto de Cafetería Vale
+      `.trim();
+      
+      // Crear el enlace mailto
+      const asunto = encodeURIComponent(`${tipoMensaje.charAt(0).toUpperCase() + tipoMensaje.slice(1)} - ${nombre}`);
+      const cuerpo = encodeURIComponent(cuerpoEmail);
+      const mailtoLink = `mailto:opiniones@cafeteriavale.com?subject=${asunto}&body=${cuerpo}`;
+      
+      // Abrir el cliente de email
+      window.location.href = mailtoLink;
+      
+      // Mostrar mensaje de éxito
+      document.getElementById('mensajeExito').style.display = 'block';
+      
+      // Limpiar formulario
+      document.getElementById('formularioOpinion').reset();
+      
+      // Scroll hacia arriba para ver el mensaje
+      document.getElementById('mensajeExito').scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
 
 </body>
 </html>
