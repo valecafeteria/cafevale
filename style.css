@@ -548,6 +548,238 @@ footer {
   }
 }
 
+/* Estilos para la página de contacto */
+.contacto-container {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 40px;
+max-width: 1200px;
+margin: 0 auto;
+padding: 40px 20px;
+}
+
+.info-contacto {
+background-color: #fff;
+padding: 30px;
+border-radius: 12px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+border: 2px solid #c4b69f;
+}
+
+.info-contacto h3 {
+font-family: ‘Playfair Display’, serif;
+font-size: 1.8rem;
+color: #2c1c13;
+margin-bottom: 25px;
+text-align: center;
+border-bottom: 2px solid #a67b5b;
+padding-bottom: 10px;
+}
+
+.contacto-item {
+display: flex;
+align-items: flex-start;
+margin-bottom: 25px;
+padding: 15px;
+background-color: #fffaf3;
+border-radius: 8px;
+border-left: 4px solid #a67b5b;
+transition: transform 0.3s ease;
+}
+
+.contacto-item:hover {
+transform: translateX(5px);
+}
+
+.contacto-icon {
+font-size: 2rem;
+margin-right: 15px;
+min-width: 50px;
+}
+
+.contacto-texto h4 {
+font-family: ‘Playfair Display’, serif;
+color: #2c1c13;
+font-size: 1.2rem;
+margin-bottom: 5px;
+}
+
+.contacto-texto p {
+color: #4e342e;
+line-height: 1.5;
+margin: 0;
+}
+
+/* Formulario de opiniones */
+.form-opiniones {
+background-color: #fff;
+padding: 30px;
+border-radius: 12px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+border: 2px solid #c4b69f;
+}
+
+.form-opiniones h3 {
+font-family: ‘Playfair Display’, serif;
+font-size: 1.8rem;
+color: #2c1c13;
+margin-bottom: 25px;
+text-align: center;
+border-bottom: 2px solid #a67b5b;
+padding-bottom: 10px;
+}
+
+.mensaje-exito {
+background-color: #d4edda;
+color: #155724;
+padding: 15px;
+border-radius: 8px;
+border: 1px solid #c3e6cb;
+margin-bottom: 20px;
+display: none;
+text-align: center;
+font-weight: bold;
+}
+
+.form-group {
+margin-bottom: 20px;
+}
+
+.form-group label {
+display: block;
+margin-bottom: 8px;
+font-weight: bold;
+color: #2c1c13;
+font-family: ‘Playfair Display’, serif;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+width: 100%;
+padding: 12px;
+border: 2px solid #c4b69f;
+border-radius: 8px;
+font-family: ‘Roboto’, sans-serif;
+font-size: 1rem;
+background-color: #fffaf3;
+transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+outline: none;
+border-color: #a67b5b;
+box-shadow: 0 0 5px rgba(166, 123, 91, 0.3);
+}
+
+.form-group textarea {
+height: 120px;
+resize: vertical;
+}
+
+.btn-enviar {
+background-color: #a67b5b;
+color: white;
+padding: 15px 30px;
+border: none;
+border-radius: 30px;
+font-size: 1.1rem;
+font-weight: bold;
+cursor: pointer;
+transition: all 0.3s ease;
+width: 100%;
+font-family: ‘Playfair Display’, serif;
+}
+
+.btn-enviar:hover {
+background-color: #8c5c3c;
+transform: translateY(-2px);
+box-shadow: 0 4px 12px rgba(140, 92, 60, 0.3);
+}
+
+/* Sección de horarios */
+.horarios {
+max-width: 600px;
+margin: 40px auto;
+padding: 30px;
+background-color: #fff;
+border-radius: 12px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+border: 2px solid #c4b69f;
+}
+
+.horarios h3 {
+font-family: ‘Playfair Display’, serif;
+font-size: 1.8rem;
+color: #2c1c13;
+margin-bottom: 25px;
+text-align: center;
+border-bottom: 2px solid #a67b5b;
+padding-bottom: 10px;
+}
+
+.horario-item {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px;
+margin-bottom: 10px;
+background-color: #fffaf3;
+border-radius: 8px;
+border-left: 4px solid #a67b5b;
+transition: background-color 0.3s ease;
+}
+
+.horario-item:hover {
+background-color: #f5f0e8;
+}
+
+.horario-item:last-child {
+margin-bottom: 0;
+}
+
+/* Responsive para contacto */
+@media (max-width: 768px) {
+.contacto-container {
+grid-template-columns: 1fr;
+gap: 30px;
+padding: 20px 15px;
+}
+
+.info-contacto,
+.form-opiniones {
+padding: 20px;
+}
+
+.info-contacto h3,
+.form-opiniones h3 {
+font-size: 1.5rem;
+}
+
+.contacto-item {
+flex-direction: column;
+text-align: center;
+}
+
+.contacto-icon {
+margin-right: 0;
+margin-bottom: 10px;
+}
+
+.horarios {
+margin: 30px 15px;
+padding: 20px;
+}
+
+.horario-item {
+flex-direction: column;
+text-align: center;
+gap: 5px;
+}
+}
+
 /* Responsivo */
 @media (max-width: 768px) {
   .navbar {
