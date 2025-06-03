@@ -406,8 +406,19 @@
 <div class="producto">
   <img src="img/pan_frances.jpg" alt="Pan Francés">
   <h2>Pan Francés</h2>
-  <p>Rebanadas de pan doradas, bañadas en huevo y leche, acompañadas de miel o mermelada.</p>
-  <p class="precio">$55</p>
+  <label>Porción:
+    <select id="tamano-pan-frances">
+      <option value="55">Individual - $55</option>
+      <option value="70">Doble - $70</option>
+    </select>
+  </label>
+  <label>Acompañamiento:
+    <select id="extra-pan-frances">
+      <option value="Miel">Miel</option>
+      <option value="Mermelada de fresa">Mermelada de fresa</option>
+      <option value="Frutas">Frutas</option>
+    </select>
+  </label>
   <button onclick="agregarProductoPersonalizado('Pan Francés')">Agregar al carrito</button>
 </div>
 
@@ -415,8 +426,19 @@
 <div class="producto">
   <img src="img/hot_cakes.jpg" alt="Hot Cakes">
   <h2>Hot Cakes</h2>
-  <p>Esponjosos hot cakes con mantequilla y jarabe de maple.</p>
-  <p class="precio">$60</p>
+  <label>Porción:
+    <select id="tamano-hot-cakes">
+      <option value="60">3 piezas - $60</option>
+      <option value="75">5 piezas - $75</option>
+    </select>
+  </label>
+  <label>Acompañamiento:
+    <select id="extra-hot-cakes">
+      <option value="Jarabe de maple">Jarabe de maple</option>
+      <option value="Frutas">Frutas</option>
+      <option value="Crema batida">Crema batida</option>
+    </select>
+  </label>
   <button onclick="agregarProductoPersonalizado('Hot Cakes')">Agregar al carrito</button>
 </div>
 
@@ -424,8 +446,19 @@
 <div class="producto">
   <img src="img/tostadas_francesas.jpg" alt="Tostadas Francesas">
   <h2>Tostadas Francesas</h2>
-  <p>Pan artesanal remojado en huevo, frito y servido con azúcar glass y frutas frescas.</p>
-  <p class="precio">$65</p>
+  <label>Porción:
+    <select id="tamano-tostadas-francesas">
+      <option value="65">3 piezas - $65</option>
+      <option value="80">5 piezas - $80</option>
+    </select>
+  </label>
+  <label>Acompañamiento:
+    <select id="extra-tostadas-francesas">
+      <option value="Frutas">Frutas</option>
+      <option value="Miel de maple">Miel de maple</option>
+      <option value="Azúcar glass">Azúcar glass</option>
+    </select>
+  </label>
   <button onclick="agregarProductoPersonalizado('Tostadas Francesas')">Agregar al carrito</button>
 </div>
 
@@ -433,8 +466,19 @@
 <div class="producto">
   <img src="img/bagel_queso_crema.jpg" alt="Bagel con Queso Crema">
   <h2>Bagel con Queso Crema</h2>
-  <p>Bagel fresco untado con queso crema suave, opcional con salmón ahumado.</p>
-  <p class="precio">$70</p>
+  <label>Tipo:
+    <select id="tamano-bagel">
+      <option value="70">Sencillo - $70</option>
+      <option value="90">Con salmón - $90</option>
+    </select>
+  </label>
+  <label>Acompañamiento:
+    <select id="extra-bagel">
+      <option value="Sin extra">Sin extra</option>
+      <option value="Tomate">Tomate</option>
+      <option value="Aguacate">Aguacate</option>
+    </select>
+  </label>
   <button onclick="agregarProductoPersonalizado('Bagel con Queso Crema')">Agregar al carrito</button>
 </div>
 
@@ -442,8 +486,19 @@
 <div class="producto">
   <img src="img/croissant_salado.jpg" alt="Croissant Salado">
   <h2>Croissant Salado</h2>
-  <p>Croissant relleno de jamón y queso fundido, perfecto para acompañar tu café.</p>
-  <p class="precio">$55</p>
+  <label>Tipo:
+    <select id="tamano-croissant-salado">
+      <option value="55">Jamón y queso - $55</option>
+      <option value="65">Vegetariano - $65</option>
+    </select>
+  </label>
+  <label>Acompañamiento:
+    <select id="extra-croissant-salado">
+      <option value="Sin extra">Sin extra</option>
+      <option value="Salsa especial">Salsa especial</option>
+      <option value="Fruta de temporada">Fruta de temporada</option>
+    </select>
+  </label>
   <button onclick="agregarProductoPersonalizado('Croissant Salado')">Agregar al carrito</button>
 </div>
 
