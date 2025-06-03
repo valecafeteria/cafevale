@@ -171,7 +171,7 @@ function procederCheckout() {
   mensaje += `TOTAL: $${total}\n\n¿Podrían confirmar disponibilidad y tiempo de entrega?`;
   
   // Crear enlace de WhatsApp
-  const numeroWhatsApp = '5215551234567'; // Cambia por tu número
+  const numeroWhatsApp = '7202453939'; // Cambia por tu número
   const enlaceWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
   
   window.open(enlaceWhatsApp, '_blank');
