@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Envía tus Comentarios</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+```
+    body {
+        font-family: 'Arial', sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 20px;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .header {
+        text-align: center;
+        margin-bottom: 50px;
+        color: white;
+    }
+
+    .header h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+    }
+
+    .contact-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        margin-bottom: 50px;
+    }
+
+    .contact-info {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 40px;
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .contact-info h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+        color: #fff;
+    }
+
+    .info-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+        padding: 15px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+
+    .info-item:hover {
+        transform: translateX(10px);
+    }
+
+    .info-icon {
+        width: 24px;
+        height: 24px;
+        margin-right: 15px;
+        fill: #fff;
+    }
+
+    .contact-form {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+
+    .contact-form h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+        color: #333;
+        text-align: center;
+    }
+
+    .form-group {
+        margin-bottom: 25px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: #555;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        width: 100%;
+        padding: 15px;
+        border: 2px solid #e1e1e1;
+        border-radius: 10px;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        background: rgba(255, 255, 255, 0.9);
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+        outline: none;
+        border-color: #667eea;
+        box-shadow: 0 0 20px rgba(102, 126, 234, 0.2);
+        transform: translateY(-2px);
+    }
+
+    .form-group textarea {
+        resize: vertical;
+        min-height: 120px;
+    }
+
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .submit-btn {
+        width: 100%;
+        padding: 18px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .submit-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+    }
+
+    .submit-btn:active {
+        transform: translateY(-1px);
+    }
+
+    .success-message {
+        display: none;
+        background: #d4edda;
+        color: #155724;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 20px;
+        border: 1px solid #c3e6cb;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .error-message {
+        display: none;
+        background: #f8d7da;
+        color: #721c24;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 20px;
+        border: 1px solid #f5c6cb;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+        .contact-section {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .form-row {
+            grid-template-columns: 1fr;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+        }
+
+        .contact-info,
+        .contact-form {
+            padding: 25px;
+        }
+    }
+
+    .loading {
+        display: none;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .spinner {
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #667eea;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+        margin: 0 auto;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+</style>
+```
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>¡Contáctanos!</h1>
+            <p>Nos encantaría escuchar tus comentarios y sugerencias</p>
+        </div>
+
+```
+    <div class="contact-section">
+        <div class="contact-info">
+            <h2>Información de Contacto</h2>
+            
+            <div class="info-item">
+                <svg class="info-icon" viewBox="0 0 24 24">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+                <div>
+                    <strong>Email:</strong><br>
+                    contacto@tuempresa.com
+                </div>
+            </div>
+
+            <div class="info-item">
+                <svg class="info-icon" viewBox="0 0 24 24">
+                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                </svg>
+                <div>
+                    <strong>Teléfono:</strong><br>
+                    +52 (55) 1234-5678
+                </div>
+            </div>
+
+            <div class="info-item">
+                <svg class="info-icon" viewBox="0 0 24 24">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+                <div>
+                    <strong>Dirección:</strong><br>
+                    Av. Principal 123<br>
+                    Tizayuca, Hidalgo, México
+                </div>
+            </div>
+
+            <div class="info-item">
+                <svg class="info-icon" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <div>
+                    <strong>Horario de Atención:</strong><br>
+                    Lun - Vie: 9:00 AM - 6:00 PM<br>
+                    Sáb: 10:00 AM - 2:00 PM
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h2>Envía tus Comentarios</h2>
+            <form id="contactForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nombre">Nombre *</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido">Apellido *</label>
+                        <input type="text" id="apellido" name="apellido" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="asunto">Asunto *</label>
+                    <select id="asunto" name="asunto" required>
+                        <option value="">Selecciona un asunto</option>
+                        <option value="comentario">Comentario General</option>
+                        <option value="sugerencia">Sugerencia</option>
+                        <option value="queja">Queja</option>
+                        <option value="felicitacion">Felicitación</option>
+                        <option value="soporte">Soporte Técnico</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje *</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Escribe aquí tu comentario..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    Enviar Comentario
+                </button>
+
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>Enviando tu mensaje...</p>
+                </div>
+
+                <div class="success-message">
+                    ¡Tu comentario ha sido enviado exitosamente! Te contactaremos pronto.
+                </div>
+
+                <div class="error-message">
+                    Hubo un error al enviar tu mensaje. Por favor, intenta nuevamente.
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Obtener los datos del formulario
+        const formData = {
+            nombre: document.getElementById('nombre').value,
+            apellido: document.getElementById('apellido').value,
+            email: document.getElementById('email').value,
+            telefono: document.getElementById('telefono').value,
+            asunto: document.getElementById('asunto').value,
+            mensaje: document.getElementById('mensaje').value
+        };
+
+        // Validación básica
+        if (!formData.nombre || !formData.apellido || !formData.email || !formData.asunto || !formData.mensaje) {
+            showError('Por favor, completa todos los campos obligatorios.');
+            return;
+        }
+
+        // Validar email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(formData.email)) {
+            showError('Por favor, ingresa un correo electrónico válido.');
+            return;
+        }
+
+        // Mostrar loading
+        showLoading(true);
+        hideMessages();
+
+        // Simular envío del formulario
+        setTimeout(() => {
+            // Aquí normalmente harías una petición AJAX a tu servidor
+            sendEmail(formData);
+        }, 2000);
+    });
+
+    function sendEmail(formData) {
+        // Configurar EmailJS o método de envío de correo
+        // Por ahora simularemos el envío exitoso
+        
+        // Construir el enlace mailto como respaldo
+        const subject = `Contacto Web: ${formData.asunto}`;
+        const body = `
+```
+
+Nombre: ${formData.nombre} ${formData.apellido}
+Email: ${formData.email}
+Teléfono: ${formData.telefono || ‘No proporcionado’}
+Asunto: ${formData.asunto}
+
+Mensaje:
+${formData.mensaje}
+`.trim();
+
+```
+        const mailtoLink = `mailto:contacto@tuempresa.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        
+        // Abrir cliente de correo
+        window.location.href = mailtoLink;
+        
+        showLoading(false);
+        showSuccess();
+        resetForm();
+    }
+
+    function showLoading(show) {
+        const loading = document.querySelector('.loading');
+        const submitBtn = document.querySelector('.submit-btn');
+        
+        if (show) {
+            loading.style.display = 'block';
+            submitBtn.style.display = 'none';
+        } else {
+            loading.style.display = 'none';
+            submitBtn.style.display = 'block';
+        }
+    }
+
+    function showSuccess() {
+        const successMsg = document.querySelector('.success-message');
+        successMsg.style.display = 'block';
+        
+        setTimeout(() => {
+            successMsg.style.display = 'none';
+        }, 5000);
+    }
+
+    function showError(message) {
+        const errorMsg = document.querySelector('.error-message');
+        errorMsg.textContent = message;
+        errorMsg.style.display = 'block';
+        
+        setTimeout(() => {
+            errorMsg.style.display = 'none';
+        }, 5000);
+    }
+
+    function hideMessages() {
+        document.querySelector('.success-message').style.display = 'none';
+        document.querySelector('.error-message').style.display = 'none';
+    }
+
+    function resetForm() {
+        document.getElementById('contactForm').reset();
+    }
+
+    // Animaciones adicionales para mejorar la experiencia
+    document.addEventListener('DOMContentLoaded', function() {
+        const formInputs = document.querySelectorAll('input, textarea, select');
+        
+        formInputs.forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.style.transform = 'scale(1.02)';
+            });
+            
+            input.addEventListener('blur', function() {
+                this.parentElement.style.transform = 'scale(1)';
+            });
+        });
+    });
+</script>
+```
+
+</body>
+</html>
