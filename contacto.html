@@ -73,11 +73,8 @@
 
     <div class="form-opiniones">
       <h3>Envíanos tu Opinión</h3>
-      <div class="mensaje-exito" id="mensajeExito">
-        ¡Gracias por tu mensaje! Lo hemos recibido correctamente.
-      </div>
-      
-      <form id="formularioOpinion" action="mailto:opiniones@cafeteriavale.com" method="post" enctype="text/plain">
+
+      <form action="https://formspree.io/f/mwpbkrjr" method="POST" id="formularioOpinion">
         <div class="form-group">
           <label for="nombre">Nombre Completo *</label>
           <input type="text" id="nombre" name="nombre" required>
@@ -97,9 +94,9 @@
           <label for="sucursal">Sucursal Visitada</label>
           <select id="sucursal" name="sucursal">
             <option value="">Selecciona una sucursal</option>
-            <option value="tizayuca">Tizayuca</option>
-            <option value="pachuca">Pachuca</option>
-            <option value="ambas">Ambas</option>
+            <option value="Tizayuca">Tizayuca</option>
+            <option value="Pachuca">Pachuca</option>
+            <option value="Ambas">Ambas</option>
           </select>
         </div>
 
@@ -139,6 +136,26 @@
       <span>8:00 AM - 8:00 PM</span>
     </div>
   </div>
+
+  <script>
+    const form = document.getElementById("formularioOpinion");
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          alert("¡Gracias por tu mensaje! Lo hemos recibido correctamente.");
+          form.reset();
+        } else {
+          alert("Ocurrió un error al enviar tu mensaje. Inténtalo nuevamente.");
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
